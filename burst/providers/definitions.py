@@ -117,13 +117,13 @@ def update(d, u):
 
 
 # Load generated providers
-load_providers(os.path.join(ADDON_PATH, 'nova', 'providers', 'definitions.json'), fix_seasons=True)
+load_providers(os.path.join(ADDON_PATH, 'burst', 'providers', 'definitions.json'), fix_seasons=True)
 
 # Load built-in providers
-load_providers(os.path.join(ADDON_PATH, 'nova', 'providers', 'providers.json'))
+load_providers(os.path.join(ADDON_PATH, 'burst', 'providers', 'providers.json'))
 
 # Load providers overrides
-load_overrides(os.path.join(ADDON_PATH, 'nova', 'providers'))
+load_overrides(os.path.join(ADDON_PATH, 'burst', 'providers'))
 
 # Load user's custom providers
 custom_providers = os.path.join(xbmc.translatePath(ADDON_PROFILE), "providers")
