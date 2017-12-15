@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <category label="32000">
+    <setting label="32041" id="use_cloudhole" type="bool" default="false" />
+    <setting label="32033" id="min_size" type="slider" option="float" range="0,0.25,100" default="0" />
+    <setting label="32034" id="max_size" type="slider" option="float" range="1,1,200" default="100" />
+    <setting label="32040" id="max_results" type="slider" default="10" option="int" range="1,1,20" />
+    <setting label="32070" id="timeout" type="slider" default="9" option="int" range="3,1,20" />
+    <setting label="32071" id="timeout_help" type="text" enable="false" subsetting="true" />
+  </category>
+  <category label="32001">
+    <setting label="32012" type="lsep" />
+    <setting label="Rutor" id="use_rutor" type="bool" default="false" />
+      <setting id="rutor_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+
+    <setting label="MegaPeer" id="use_megapeer" type="bool" default="false" />
+      <setting id="megapeer_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+
+    <setting label="Serialz.tv" id="use_serialz" type="bool" default="false" />
+      <setting id="serialz_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+
+    <setting label="tfile.me" id="use_tfile" type="bool" default="false" />
+      <setting id="tfile_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+
+    <setting label="Kinozal" id="use_kinozal" type="bool" default="false" />
+      <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+
+    <setting label="32014" type="lsep" />
+    <setting label="0day" id="use_0day" type="bool" default="false" />
+      <setting id="0day_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="0day_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="0day_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="NewStudio" id="use_newstudio" type="bool" default="false" />
+      <setting id="newstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="newstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="newstudio_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="NNM-Club" id="use_nnmclub" type="bool" default="false" />
+      <setting id="nnmclub_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="nnmclub_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="nnmclub_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="RuTracker" id="use_rutracker" type="bool" default="false" />
+      <setting id="rutracker_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="rutracker_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="rutracker_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="BaibaKo.TV" id="use_baibako" type="bool" default="false" />
+      <setting id="baibako_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="baibako_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="baibako_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="torrent3d.ru" id="use_torrent3dru" type="bool" default="false" />
+      <setting id="torrent3dru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="torrent3dru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="torrent3dru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="3d-tracker.ru" id="use_3dtrackerru" type="bool" default="false" />
+      <setting id="3dtrackerru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="3dtrackerru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="3dtrackerru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="Rustorka" id="use_rustorka" type="bool" default="false" />
+      <setting id="rustorka_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="rustorka_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="rustorka_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+
+    <setting label="LostFilm.TV" id="use_lostfilm" type="bool" default="false" />
+      <setting id="lostfilm_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="lostfilm_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+
+  </category>
+  <category label="32002">
+    <setting label="4K/2160p" id="filter_4k" type="bool" default="true" />
+    <setting label="2K/1440p" id="filter_2k" type="bool" default="true" />
+    <setting label="1080p" id="filter_1080p" type="bool" default="true" />
+    <setting label="720p" id="filter_720p" type="bool" default="true" />
+    <setting label="480p" id="filter_480p" type="bool" default="true" />
+    <setting label="240p" id="filter_240p" type="bool" default="false" />
+  </category>
+  <category label="32003">
+    <setting label="BRRip/BDRip/Bluray" id="filter_brrip" type="bool" default="true" />
+    <setting label="WebDL/WebRip" id="filter_webdl" type="bool" default="true" />
+    <setting label="HDRip" id="filter_hdrip" type="bool" default="true" />
+    <setting label="HDTV" id="filter_hdtv" type="bool" default="true" />
+    <setting label="DVDRip" id="filter_dvd" type="bool" default="true" />
+    <setting label="DVDScr" id="filter_dvdscr" type="bool" default="true" />
+    <setting label="Screener/SCR" id="filter_screener" type="bool" default="true" />
+    <setting label="3D" id="filter_3d" type="bool" default="false" />
+    <setting label="TeleSync/TS/TC" id="filter_ts" type="bool" default="false" />
+    <setting label="Cam/HDCam" id="filter_cam" type="bool" default="false" />
+    <setting label="TVRip/SATRip" id="filter_tvrip" type="bool" default="false" />
+    <setting label="VHSRip" id="filter_vhsrip" type="bool" default="false" />
+    <setting label="Trailer" id="filter_trailer" type="bool" default="false" />
+    <setting label="Workprint" id="filter_workprint" type="bool" default="false" />
+  </category>
+  <category label="32004">
+    <setting label="32035" id="separate_sizes" type="bool" default="false" />
+    <setting label="32006" type="lsep" subsetting="true" visible="eq(-1,true)" />
+    <setting label="32033" id="min_size_movies" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-2,true)" />
+    <setting label="32034" id="max_size_movies" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-3,true)" />
+    <setting label="32008" type="lsep" subsetting="true" visible="eq(-4,true)" />
+    <setting label="32033" id="min_size_seasons" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-5,true)" />
+    <setting label="32034" id="max_size_seasons" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-6,true)" />
+    <setting label="32009" type="lsep" subsetting="true" visible="eq(-7,true)" />
+    <setting label="32033" id="min_size_episodes" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-8,true)" />
+    <setting label="32034" id="max_size_episodes" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-9,true)" />
+    <setting label="32036" id="additional_filters" type="bool" default="false" />
+    <setting label="32037" id="filtering_help" type="text" enable="false" subsetting="true" visible="eq(-1,true)" />
+    <setting label="32038" id="accept" type="text" default="" subsetting="true" visible="eq(-2,true)" />
+    <setting label="32039" id="block" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+    <setting label="32017" id="require" type="text" default="" subsetting="true" visible="eq(-4,true)" />
+    <setting label="32018" id="kodi_language" type="bool" default="false" />
+    <setting label="32050" id="language_exceptions" type="text" subsetting="true" visible="eq(-1,true)" />
+    <setting label="32051" id="language_help" type="text" enable="false" subsetting="true" visible="eq(-2,true)" />
+  </category>
+</settings>

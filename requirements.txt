@@ -1,0 +1,4 @@
+flake8
+sphinx
+sphinx-autobuild
+https://github.com/romanvm/Kodistubs/tarball/master
