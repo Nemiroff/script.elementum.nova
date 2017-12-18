@@ -57,7 +57,7 @@ def generate_payload(provider, generator, filtering, verify_name=True, verify_si
     return results
 
 
-def process(provider, generator, filtering, verify_name=True, verify_size=True):
+def process(provider, generator, filtering, has_special, verify_name=True, verify_size=True):
     """ Method for processing provider results using its generator and Filtering class instance
 
     Args:
@@ -94,6 +94,9 @@ def process(provider, generator, filtering, verify_name=True, verify_size=True):
 
     for query, extra in zip(filtering.queries, filtering.extras):
         log.debug("[%s] Before keywords - Query: %s - Extra: %s" % (provider, repr(query), repr(extra)))
+        if has_special:
+            # Removing quotes, surrounding{title*} keywords, when title contain special chars
+            query = re.sub("[\"']({title.*?})[\"']", '\\1', query)
 
         query = filtering.process_keywords(provider, query)
         extra = filtering.process_keywords(provider, extra)

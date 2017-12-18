@@ -49,6 +49,15 @@ def search(payload, method="general"):
             }
         }
 
+    # If titles[] exists in payload and there are special chars in titles[Original]
+    # then we set a flag to possibly modify the search query
+    payload['has_special'] = 'titles' in payload and \
+                             bool(payload['titles']) and \
+                             'Original' in payload['titles'] and \
+                             any(c in payload['titles']['Original'] for c in special_chars)
+    if payload['has_special']:
+        log.debug('Query title contains special chars, so removing any quotes in the search query')
+
     global request_time
     global provider_names
     global provider_results
@@ -451,8 +460,8 @@ def run_provider(provider, payload, method):
         filterInstance.use_general(provider, payload)
 
     if 'is_api' in definitions[provider]:
-        results = process(provider=provider, generator=extract_from_api, filtering=filterInstance)
+        results = process(provider=provider, generator=extract_from_api, filtering=filterInstance, has_special=payload['has_special'])
     else:
-        results = process(provider=provider, generator=extract_torrents, filtering=filterInstance)
+        results = process(provider=provider, generator=extract_torrents, filtering=filterInstance, has_special=payload['has_special'])
 
     got_results(provider, results)
