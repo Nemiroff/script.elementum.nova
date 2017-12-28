@@ -10,7 +10,8 @@ ZIP_FILE = $(NAME)-$(VERSION).$(ZIP_SUFFIX)
 all: clean zip
 
 $(ZIP_FILE):
-	$(GIT) archive --format zip -0 --prefix $(NAME)/ --output $(ZIP_FILE) HEAD
+	./scripts/changelog.sh > changelog.txt
+	$(GIT) archive --format zip --prefix $(NAME)/ --output $(ZIP_FILE) HEAD
 	rm -rf $(NAME)
 
 zip: $(ZIP_FILE)
