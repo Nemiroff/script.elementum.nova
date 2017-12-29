@@ -312,7 +312,7 @@
             "size": "item(tag='td', order=4)",
             "torrent": "'http://tfile.cc/forum/viewtopic.php?t=%s' % item(attribute='id')[1:]"
         },
-        "private": true,
+        "private": false,
         "root_url": "http://tfile.cc/",
         "season_extra": "",
         "season_extra2": "",
@@ -488,7 +488,7 @@
         "subpage": false,
         "tv_extra": "",
         "tv_extra2": "",
-        "tv_keywords": "{title} s{season:2}e{episode:2}",
+        "tv_keywords": "{title} \"{season} %D1%E5%E7%EE%ED\"",
         "tv_keywords2": "{title} \"{season} %D1%E5%E7%EE%ED\""
     },
     "lostfilm": {
