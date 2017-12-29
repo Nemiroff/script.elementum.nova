@@ -258,7 +258,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
 
         if provider == 'lostfilm':
             log.info('[%s] Need open page before search', provider)
-            url_search = url_search.replace('marvels_', '')
+            url_search = url_search.replace('marvel\'s_', '')
             client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
             search_info = re.search(r'PlayEpisode\((.*?)\)">', client.content)
             if search_info:
