@@ -178,3 +178,7 @@ msgstr ""
 msgctxt "#32081"
 msgid "Serials"
 msgstr ""
+
+msgctxt "#32082"
+msgid "E-Mail"
+msgstr ""
