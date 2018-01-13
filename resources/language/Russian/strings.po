@@ -177,3 +177,7 @@ msgstr "Фильмы"
 msgctxt "#32081"
 msgid "Serials"
 msgstr "Сериалы"
+
+msgctxt "#32082"
+msgid "E-Mail"
+msgstr "E-Mail"
