@@ -214,8 +214,8 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                 if provider == 'lostfilm':
                     client.open(definition['root_url'] + '/v_search.php&c=110&s=1&e=1')
                     if client.content is not 'log in first':
-                           log.info('[%s] Login successful' % provider)
-                           logged_in = True
+                        log.info('[%s] Login successful' % provider)
+                        logged_in = True
 
                 if 'token_auth' in definition:
                     # log.debug("[%s] logging in with: %s" % (provider, login_object))
