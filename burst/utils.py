@@ -325,18 +325,18 @@ def encode_dict(dict_in):
         dict_out[k] = v
     return dict_out
 
-def iri2uri(iri):
-    iri = "".join([encode(c) for c in iri])
+def iri2uri(iri, charset):
+    iri = "".join([encode(c, charset) for c in iri])
     return iri
 
-def encode(c):
+def encode(c, charset):
     retval = c
     i = ord(c)
     for low, high in escape_range:
         if i < low:
             break
         if i >= low and i <= high:
-            retval = "".join(["%%%2X" % ord(o) for o in c.encode('cp1251')])
+            retval = "".join(["%%%2X" % ord(o) for o in c.encode(charset)])
             break
     return retval
 
