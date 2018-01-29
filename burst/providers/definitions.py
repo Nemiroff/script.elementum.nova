@@ -57,9 +57,6 @@ def load_overrides(path, custom=False):
         if custom:
             sys.path.append(path)
             from overrides import overrides
-        else:
-            from burst_overrides import overrides
-        if custom:
             log.debug("Imported overrides: %s", repr(overrides))
         for provider in overrides:
             update_definitions(provider, overrides[provider])
@@ -116,11 +113,8 @@ def update(d, u):
     return d
 
 
-# Load generated providers
-load_providers(os.path.join(ADDON_PATH, 'burst', 'providers', 'definitions.json'), fix_seasons=True)
-
-# Load built-in providers
-load_providers(os.path.join(ADDON_PATH, 'burst', 'providers', 'providers.json'))
+# Load providers
+load_providers(os.path.join(ADDON_PATH, 'burst', 'providers', 'providers.json'), fix_seasons=True)
 
 # Load providers overrides
 load_overrides(os.path.join(ADDON_PATH, 'burst', 'providers'))

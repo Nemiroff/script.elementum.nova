@@ -100,6 +100,13 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
 
         query = filtering.process_keywords(provider, query)
         extra = filtering.process_keywords(provider, extra)
+        if 'charset' in definition:
+            try:
+                query = iri2uri(query, definition['charset'].lower())
+                extra = iri2uri(extra, definition['charset'].lower())
+            except:
+                pass
+
         log.debug("[%s] After keywords  - Query: %s - Extra: %s" % (provider, repr(query), repr(extra)))
         if not query:
             return filtering.results
@@ -193,24 +200,6 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                 login_object = definition['login_object'].replace('USERNAME', '"%s"' % username).replace('PASSWORD', '"%s"' % password)
 
                 # TODO generic flags in definitions for those...
-                if provider == 'alphareign':
-                    client.open(definition['root_url'] + definition['login_path'])
-                    if client.content:
-                        csrf_name = re.search(r'name="csrf_name" value="(.*?)"', client.content)
-                        csrf_value = re.search(r'name="csrf_value" value="(.*?)"', client.content)
-                        if csrf_name and csrf_value:
-                            login_object = login_object.replace("CSRF_NAME", '"%s"' % csrf_name.group(1))
-                            login_object = login_object.replace("CSRF_VALUE", '"%s"' % csrf_value.group(1))
-                        else:
-                            logged_in = True
-                if provider == 'hd-torrents':
-                    client.open(definition['root_url'] + definition['login_path'])
-                    if client.content:
-                        csrf_token = re.search(r'name="csrfToken" value="(.*?)"', client.content)
-                        if csrf_token:
-                            login_object = login_object.replace('CSRF_TOKEN', '"%s"' % csrf_token.group(1))
-                        else:
-                            logged_in = True
                 if provider == 'lostfilm':
                     client.open(definition['root_url'] + '/v_search.php&c=110&s=1&e=1')
                     if client.content is not 'log in first':
@@ -247,11 +236,6 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                     return filtering.results
 
                 if logged_in:
-                    if provider == 'hd-torrents':
-                        client.open(definition['root_url'] + '/torrents.php')
-                        csrf_token = re.search(r'name="csrfToken" value="(.*?)"', client.content)
-                        url_search = url_search.replace("CSRF_TOKEN", csrf_token.group(1))
-
                     if provider == 'lostfilm':
                         log.info('[%s] Need open page before search', provider)
                         url_search = url_search.replace('marvel\'s_', '')
@@ -260,15 +244,12 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         if search_info:
                             series_details = re.search('\'(\d+)\',\'(\d+)\',\'(\d+)\'', search_info.group(1))
                             client.open(definition['root_url'] + '/v_search.php?c=%s&s=%s&e=%s' % (series_details.group(1), series_details.group(2), series_details.group(3)))
-                            url_search = re.search(ur'url=(.*?)">', client.content).group(1)
+                            redirect_url = re.search(ur'url=(.*?)">', client.content)
+                            if redirect_url is not None:
+                                url_search = redirect_url.group(1)
                         else:
-                            log.error('[%s] Not found serials on site. Maybe need correct title' % provider)
                             return filtering.results
 
-        if provider == 'rutor':
-            pass
-        else:
-            url_search = iri2uri(url_search)
         log.info(">  %s search URL: %s" % (definition['name'].rjust(longest), url_search))
 
         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
