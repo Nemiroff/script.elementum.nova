@@ -58,9 +58,8 @@ def load_overrides(path, custom=False):
             sys.path.append(path)
             from overrides import overrides
             log.debug("Imported overrides: %s", repr(overrides))
-        for provider in overrides:
-            update_definitions(provider, overrides[provider])
-        if custom:
+            for provider in overrides:
+                update_definitions(provider, overrides[provider])
             log.info("Successfully loaded overrides from %s", os.path.join(path, "overrides.py"))
     except Exception as e:
         import traceback

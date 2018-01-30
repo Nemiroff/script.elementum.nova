@@ -96,7 +96,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
     for query, extra in zip(filtering.queries, filtering.extras):
         log.debug("[%s] Before keywords - Query: %s - Extra: %s" % (provider, repr(query), repr(extra)))
         if has_special:
-            # Removing quotes, surrounding{title*} keywords, when title contain special chars
+            # Removing quotes, surrounding {title*} keywords, when title contains special chars
             query = re.sub("[\"']({title.*?})[\"']", '\\1', query)
 
         query = filtering.process_keywords(provider, query)
@@ -202,7 +202,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
 
                 # TODO generic flags in definitions for those...
                 if provider == 'lostfilm':
-                    client.open(definition['root_url'] + '/v_search.php&c=110&s=1&e=1')
+                    client.open(definition['root_url'] + '/v_search.php?c=110&s=1&e=1')
                     if client.content is not 'log in first':
                         log.info('[%s] Login successful' % provider)
                         logged_in = True
