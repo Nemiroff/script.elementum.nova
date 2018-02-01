@@ -203,7 +203,8 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                 # TODO generic flags in definitions for those...
                 if provider == 'lostfilm':
                     client.open(definition['root_url'] + '/v_search.php?c=110&s=1&e=1')
-                    if client.content is not 'log in first':
+                    if client.content == 'log in first': pass
+                    else:
                         log.info('[%s] Login successful' % provider)
                         logged_in = True
 
