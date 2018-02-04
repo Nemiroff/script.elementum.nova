@@ -203,7 +203,8 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                 # TODO generic flags in definitions for those...
                 if provider == 'lostfilm':
                     client.open(definition['root_url'] + '/v_search.php?c=110&s=1&e=1')
-                    if client.content == 'log in first': pass
+                    if client.content == 'log in first':
+                        pass
                     else:
                         log.info('[%s] Login successful' % provider)
                         logged_in = True
@@ -239,7 +240,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
 
                 if logged_in:
                     if provider == 'lostfilm':
-                        log.info('[%s] Need open page before search', provider)
+                        log.info('[%s] Search lostfilm serial ID...', provider)
                         url_search = url_search.replace('marvel\'s_', '')
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
                         search_info = re.search(r'PlayEpisode\((.*?)\)">', client.content)
@@ -250,6 +251,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                             if redirect_url is not None:
                                 url_search = redirect_url.group(1)
                         else:
+                            log.info('[%s] Not found ID' % provider)
                             return filtering.results
 
         log.info(">  %s search URL: %s" % (definition['name'].rjust(longest), url_search))

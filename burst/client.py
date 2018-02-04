@@ -6,20 +6,20 @@ Burst web client
 
 import os
 import re
+import ssl
 import sys
 import json
 import urllib2
 from time import sleep
 from urlparse import urlparse
 from contextlib import closing
-from elementum.provider import log
+from elementum.provider import log, get_setting
 from cookielib import Cookie, LWPCookieJar
 from urllib import urlencode
 from utils import encode_dict
 
 from xbmc import translatePath
 
-import ssl
 try:
     ssl._create_default_https_context = ssl._create_unverified_context
 except:
@@ -32,6 +32,21 @@ try:
     PATH_TEMP = translatePath("special://temp").decode(sys.getfilesystemencoding(), 'ignore')
 except:
     PATH_TEMP = translatePath("special://temp").decode('utf-8')
+
+if get_setting("use_opennic_dns", bool):
+    import socket
+    prv_getaddrinfo = socket.getaddrinfo
+    dns_cache = {('nnm-club.lib', 80, 0, 1): [(2, 1, 0, '', ('81.17.30.22', 80))], ('rustorka.lib', 80, 0, 1): [(2, 1, 0, '', ('93.171.158.6', 80))], ('rutracker.lib', 80, 0, 1): [(2, 1, 0, '', ('195.82.146.214', 80))], ('rutor.lib', 80, 0, 1): [(2, 1, 0, '', ('185.191.239.206', 80))]}
+
+    def new_getaddrinfo(*args):
+        try:
+            return dns_cache[args]
+        except KeyError:
+            res = prv_getaddrinfo(*args)
+            dns_cache[args] = res
+            return res
+
+    socket.getaddrinfo = new_getaddrinfo
 
 
 class Client:
