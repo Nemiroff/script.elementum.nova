@@ -27,10 +27,6 @@
       <setting id="tfile_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="tfile_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
-    <setting label="Kinozal.tv" id="use_kinozal" type="bool" default="false" />
-      <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="kinozal_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
-
     <setting label="32014" type="lsep" />
     <setting label="0day" id="use_0day" type="bool" default="false" />
       <setting id="0day_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
@@ -86,12 +82,11 @@
       <setting id="lostfilm_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="Kinozal.guru" id="use_kinozalguru" type="bool" default="false" />
-      <setting id="kinozalguru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="kinozalguru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="kinozalguru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="kinozalguru_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
+    <setting label="Kinozal.tv" id="use_kinozal" type="bool" default="false" />
+      <setting id="kinozal_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="kinozal_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="kinozal_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
   </category>
   <category label="32002">
     <setting label="4K/2160p" id="filter_4k" type="bool" default="true" />
