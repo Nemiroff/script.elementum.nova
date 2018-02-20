@@ -82,11 +82,17 @@
       <setting id="lostfilm_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="Kinozal.tv" id="use_kinozal" type="bool" default="false" />
+    <setting label="KinoZal.TV" id="use_kinozal" type="bool" default="false" />
       <setting id="kinozal_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="kinozal_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="kinozal_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+
+    <setting label="CasStudio.TV" id="use_casstudio" type="bool" default="false" />
+      <setting id="casstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="casstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="casstudio_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="casstudio_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
   </category>
   <category label="32002">
     <setting label="4K/2160p" id="filter_4k" type="bool" default="true" />
