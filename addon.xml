@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.elementum.nova" name="Elementum [COLOR FF5CB9FF]Nova[/COLOR]" version="1.0.7" provider-name="Nemiroff">
+<addon id="script.elementum.nova" name="Elementum [COLOR FF5CB9FF]Nova[/COLOR]" version="1.0.8" provider-name="Nemiroff">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="plugin.video.elementum" optional="true"/>
@@ -8,7 +8,9 @@
         <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <news lang="ru">Обновлен поиск на LostFilm.tv и Kinozal.guru</news>
+        <news>v1.0.8 (20.02.2018)
+- Kinozal.guru заменён на Kinozal.tv
++ Добавлен Casstudio.tv</news>
         <summary lang="en">Elementum torrents provider</summary>
         <summary lang="ru">Elementum трекер-провайдер</summary>
         <description lang="en">Elementum Nova is a lean and mean multi-provider for Elementum.</description>

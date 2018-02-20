@@ -1,2 +1,50 @@
-script.elementum.nova changelog
-======
+Nova changelog
+===============
+[B]v1.0.8[/B] - 2018-02-20
+ - Добавил CasStudio.TV
+ - Удален kinozal.guru, kinozal.tv теперь требует авторизацию. 
+   достаточно прописать алиас на kinozal.guru
+
+[B]v1.0.7[/B] - 2018-02-15
+ - Fix search DC shows on lostfilm.
+ - Fix search on kinozal.guru
+ - Add kinozal.guru Fix search seasons on win-1251 sites Add 
+   setting for OpenNIC DNS
+ - Fix check auth on Lostfilm
+ - Fix search season on Lostfilm
+ - Sync with burst 0.0.12 Fix check auth on Lostfilm
+
+[B]v1.0.6-alpha[/B] - 2018-01-30
+ - monkey patching for lib zone
+ - Sync with burst 0.0.12 Fix check auth on Lostfilm
+
+[B]v1.0.6[/B] - 2018-02-05
+ - Add kinozal.guru Fix search seasons on win-1251 sites Add 
+   setting for OpenNIC DNS
+ - Fix check auth on Lostfilm
+ - Fix search season on Lostfilm
+
+[B]v1.0.5[/B] - 2018-01-30
+ - Sync with burst 0.0.12 Fix check auth on Lostfilm
+
+[B]v1.0.4[/B] - 2018-01-30
+ - no message
+ - Sync with Burst 0.0.11
+
+[B]v1.0.3[/B] - 2018-01-13
+ - Fix check auth on lostfilm
+
+[B]v1.0.2[/B] - 2017-12-29
+ - Разделение трекеров для поиска сериалов и фильмов. Добавлен 
+   логотип Lostfilm Поправлен поиск сериалов на  Rustorka
+ - Update settings.xml
+
+[B]v1.0.1[/B] - 2017-12-20
+ - Correct make changelog.txt
+ - Delete unused hd-torrents Correct URL for NNMClub, 
+   TFile
+ - Sync with elementum burst v0.0.7
+
+[B]v1.0.0[/B] - 2017-12-16
+ - Init commit
+
