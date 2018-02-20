@@ -187,7 +187,7 @@
       "peers": "0",
       "row": "find_once('div', ('class', 'inner-box--list'), order=1).find_all('div', ('class', 'inner-box--item'), start=1)",
       "seeds": "1",
-      "size": "",
+      "size": "re.search('(\\d+\\.\\d+ ..)', item(tag='div', select=('class', 'inner-box--desc'), order=1)).group(1)",
       "torrent": "'%s' % (item(tag='a', attribute='href', order=2))"
     },
     "private": true,
@@ -233,7 +233,7 @@
       "torrent": "'http://megapeer.org/%s' % item(tag='a', select=('class', 'tr-dl'), attribute='href', order=1)"
     },
     "private": false,
-    "root_url": "http://http://megapeer.org",
+    "root_url": "http://megapeer.org",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original} {season} сезон",
@@ -581,7 +581,7 @@
     "anime_extra": "",
     "anime_keywords": "",
     "anime_query": "",
-    "base_url": "https://casstudio.tv/search.php?tracker_search=tracker&keywords=QUERYEXTRAt&terms=all&author=&sc=1&sf=titleonly&sr=topics&sk=t&sd=d&st=0&ch=0&t=0&submit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA",
+    "base_url": "https://casstudio.tv/search.php?tracker_search=tracker&keywords=QUERYEXTRA&terms=all&author=&sc=1&sf=titleonly&sr=topics&sk=t&sd=d&st=0&ch=0&t=0&submit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA",
     "color": "FFFFFFFF",
     "general_extra": "",
     "general_keywords": "{title:original}",
@@ -597,17 +597,17 @@
     "parser": {
       "infohash": "",
       "name": "item(tag='a', select=('class','topictitle'), order=1)",
-      "peers": "item(tag='span', order=5, divider=('|', 1))",
+      "peers": "item(tag='span', select=('class', 'leech'))",
       "row": "find_once('table', ('class', 'cat'), order=1).find_all('tr')",
-      "seeds": "item(tag='td', order=5, divider=('|', 0))",
-      "size": "item(tag='td', order=4)",
-      "torrent": "'https://casstudio.tv/' % item(tag='a', attribute='href', order=1)"
+      "seeds": "item(tag='span', select=('class', 'seed'))",
+      "size": "item(tag='b', order=2)",
+      "torrent": "'https://casstudio.tv%s' % item(tag='a', attribute='href', order=1)[1:]"
     },
     "private": true,
     "root_url": "https://casstudio.tv",
     "season_extra": "",
     "season_extra2": "",
-    "season_keywords": "",
+    "season_keywords": "{title:original} Сезон: {season}",
     "season_keywords2": "",
     "season_query": "",
     "separator": "+",
@@ -615,7 +615,7 @@
     "subpage": false,
     "tv_extra": "",
     "tv_extra2": "",
-    "tv_keywords": "",
-    "tv_keywords2": ""
+    "tv_keywords": "{title:original} Сезон: {season}",
+    "tv_keywords2": "{title:original} ({year}) S{season:2}"
   }
 }
