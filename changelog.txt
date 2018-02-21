@@ -1,15 +1,20 @@
 Nova changelog
 ===============
-[B]v1.0.9[/B] - 2018-02-20
+[B]v1.0.10[/B] - 21.02.2018
+ - Домены lib активируются только с включенной опцией 
+ - Добавлены 720i 1080i в фильтра 720p 1080p
+ - Поправленна фильтрация 4К
+
+[B]v1.0.9[/B] - 20.02.2018
  - Добавлено отображение размера раздач с Lostfilm.TV
  - Поправлен поиск на CasStudio.tv
 
-[B]v1.0.8[/B] - 2018-02-20
+[B]v1.0.8[/B] - 20.02.2018
  - Добавил CasStudio.TV
  - Удален kinozal.guru, kinozal.tv теперь требует авторизацию. 
    достаточно прописать алиас на kinozal.guru
 
-[B]v1.0.7[/B] - 2018-02-15
+[B]v1.0.7[/B] - 15.02.2018
  - Fix search DC shows on lostfilm.
  - Fix search on kinozal.guru
  - Add kinozal.guru Fix search seasons on win-1251 sites Add 
@@ -18,37 +23,37 @@ Nova changelog
  - Fix search season on Lostfilm
  - Sync with burst 0.0.12 Fix check auth on Lostfilm
 
-[B]v1.0.6-alpha[/B] - 2018-01-30
- - monkey patching for lib zone
- - Sync with burst 0.0.12 Fix check auth on Lostfilm
-
-[B]v1.0.6[/B] - 2018-02-05
+[B]v1.0.6[/B] - 05.02.2018
  - Add kinozal.guru Fix search seasons on win-1251 sites Add 
    setting for OpenNIC DNS
  - Fix check auth on Lostfilm
  - Fix search season on Lostfilm
 
-[B]v1.0.5[/B] - 2018-01-30
+[B]v1.0.6-alpha[/B] - 30.01.2018
+ - monkey patching for lib zone
  - Sync with burst 0.0.12 Fix check auth on Lostfilm
 
-[B]v1.0.4[/B] - 2018-01-30
+[B]v1.0.5[/B] - 30.01.2018
+ - Sync with burst 0.0.12 Fix check auth on Lostfilm
+
+[B]v1.0.4[/B] - 30.01.2018
  - no message
  - Sync with Burst 0.0.11
 
-[B]v1.0.3[/B] - 2018-01-13
+[B]v1.0.3[/B] - 13.01.2018
  - Fix check auth on lostfilm
 
-[B]v1.0.2[/B] - 2017-12-29
+[B]v1.0.2[/B] - 29.12.2017
  - Разделение трекеров для поиска сериалов и фильмов. Добавлен 
    логотип Lostfilm Поправлен поиск сериалов на  Rustorka
  - Update settings.xml
 
-[B]v1.0.1[/B] - 2017-12-20
+[B]v1.0.1[/B] - 20.12.2018
  - Correct make changelog.txt
  - Delete unused hd-torrents Correct URL for NNMClub, 
    TFile
  - Sync with elementum burst v0.0.7
 
-[B]v1.0.0[/B] - 2017-12-16
+[B]v1.0.0[/B] - 16.12.2017
  - Init commit
 
