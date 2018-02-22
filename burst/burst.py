@@ -148,8 +148,16 @@ def got_results(provider, results):
     definition = get_alias(definition, get_setting("%s_alias" % provider))
 
     max_results = get_setting('max_results', int)
-    sorted_results = sorted(results, key=lambda r: (r['seeds']), reverse=True)
-    if len(sorted_results) > max_results:
+    if get_setting('sort_by_resolution', bool):
+        log.debug("[%s][EXPEREMENTAL] Sorting by resolution before cutoff max_results" % provider)
+        sorted_results = sorted(results, key=lambda r: (r['resolution']), reverse=True)
+    else:
+        sorted_results = sorted(results, key=lambda r: (r['seeds']), reverse=True)
+
+    if get_setting('disable_max', bool):
+        log.debug('[%s] Don\'t apply "max_results" settings' % provider)
+        max_results = 999
+    elif len(sorted_results) > max_results:
         sorted_results = sorted_results[:max_results]
 
     log.info(">> %s returned %2d results in %.1f seconds%s" % (

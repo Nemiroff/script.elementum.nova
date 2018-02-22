@@ -50,12 +50,12 @@ class Filtering:
     """
     def __init__(self):
         resolutions = OrderedDict()
-        resolutions['filter_240p'] = ['240p', '_tvrip_', 'satrip', 'vhsrip']
-        resolutions['filter_480p'] = ['480p', 'xvid', 'dvd', 'dvdrip', 'hdtv', 'SD']
-        resolutions['filter_720p'] = ['720p', '720i', 'hdrip', 'bluray', 'blu_ray', 'brrip', 'bdrip']
-        resolutions['filter_1080p'] = ['1080p', '1080i', 'fullhd', '_fhd_']
-        resolutions['filter_2k'] = ['_2k_', '1440p', '2k']
-        resolutions['filter_4k'] = ['_4k_', '2160p', 'uhd', '4k']
+        resolutions['filter_240p'] = ['240p', u'240р', '_tvrip_', 'satrip', 'vhsrip']
+        resolutions['filter_480p'] = ['480p', u'480р', 'xvid', 'dvd', 'dvdrip', 'hdtv', 'SD']
+        resolutions['filter_720p'] = ['720p', u'720р', '720i', 'hdrip', 'bluray', 'blu_ray', 'brrip', 'bdrip']
+        resolutions['filter_1080p'] = ['1080p', u'1080р', '1080i', 'fullhd', '_fhd_']
+        resolutions['filter_1440p'] = ['_2k_', '1440p', u'1440р', '2k', u'2к']
+        resolutions['filter_2160p'] = ['_4k_', '2160p', u'2160р', 'uhd', '4k', u'4к']
         self.resolutions = resolutions
 
         self.release_types = {
@@ -597,4 +597,10 @@ def cleanup_results(results_list):
             filtered_list.append(result)
             hashes.append(hash_)
 
-    return sorted(filtered_list, key=lambda r: (get_int(r['seeds'])), reverse=True)
+    if (get_setting("sort_by_resolution", bool)):
+        log.debug("[EXPEREMENTAL] Start last sorting list by resolution of all result before send to Elementum")
+        filtered_list = sorted(filtered_list, key=lambda r: (get_int(r.pop('resolution'))), reverse=True)
+    else:
+        filtered_list = sorted(filtered_list, key=lambda r: (get_int(r['seeds'])), reverse=True)
+
+    return filtered_list

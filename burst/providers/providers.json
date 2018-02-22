@@ -257,7 +257,7 @@
     "general_keywords": "{title}",
     "general_query": "",
     "language": null,
-    "login_failed": "You have specified an incorrect or inactive username",
+    "login_failed": "Ошибка",
     "login_object": "{'login_username': USERNAME, 'login_password': PASSWORD, 'autologin': '1', 'login': '1'}",
     "login_path": "/login.php",
     "movie_extra": "",
@@ -285,8 +285,8 @@
     "subpage": false,
     "tv_extra": "",
     "tv_extra2": "",
-    "tv_keywords": "{title} s{season:2}e{episode:2}",
-    "tv_keywords2": "{title} \"Сезон {season}\""
+    "tv_keywords": "\"(Сезон {season}, Серия {episode}) / {title:original}\"",
+    "tv_keywords2": ""
   },
   "nnmclub": {
     "anime_extra": "",

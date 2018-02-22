@@ -190,3 +190,19 @@ msgstr ""
 msgctxt "#32084"
 msgid "Allow no seeds"
 msgstr ""
+
+msgctxt "#32085"
+msgid "Experemental"
+msgstr ""
+
+msgctxt "#32086"
+msgid "Warning!"
+msgstr ""
+
+msgctxt "#32087"
+msgid "Include All Releases"
+msgstr ""
+
+msgctxt "#32088"
+msgid "Sort results by resolution"
+msgstr ""

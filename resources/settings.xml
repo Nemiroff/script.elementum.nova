@@ -95,8 +95,8 @@
       <setting id="casstudio_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
   </category>
   <category label="32002">
-    <setting label="4K/2160p" id="filter_4k" type="bool" default="true" />
-    <setting label="2K/1440p" id="filter_2k" type="bool" default="true" />
+    <setting label="4K/2160p" id="filter_2160p" type="bool" default="true" />
+    <setting label="2K/1440p" id="filter_1440p" type="bool" default="true" />
     <setting label="1080p" id="filter_1080p" type="bool" default="true" />
     <setting label="720p" id="filter_720p" type="bool" default="true" />
     <setting label="480p" id="filter_480p" type="bool" default="true" />
@@ -138,5 +138,10 @@
     <setting label="32050" id="language_exceptions" type="text" subsetting="true" visible="eq(-1,true)" />
     <setting label="32051" id="language_help" type="text" enable="false" subsetting="true" visible="eq(-2,true)" />
     <setting label="32084" id="allow_noseeds" type="bool" default="false" />
+  </category>
+  <category label="32085">
+    <setting label="32086" id="experemental_notice" type="text" enable="false" />
+    <setting label="32087" id="disable_max" type="bool" default="false" />
+    <setting label="32088" id="sort_by_resolution" type="bool" default="false" />
   </category>
 </settings>

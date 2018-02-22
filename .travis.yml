@@ -10,7 +10,6 @@ script:
 - ./scripts/xgettext.sh
 
 before_deploy:
-- ./scripts/changelog.sh > changelog.txt
 - npm install -g harp
 - npm install -g surge
 - make

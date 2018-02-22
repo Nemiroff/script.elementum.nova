@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/Nemiroff/script.elementum.nova.svg?branch=master)](https://travis-ci.org/Nemiroff/script.elementum.nova)
-# Elementum Nova
+
+# Elementum Nova [![Build Status](https://travis-ci.org/Nemiroff/script.elementum.nova.svg?branch=master)](https://travis-ci.org/Nemiroff/script.elementum.nova) [![GitHub release](https://img.shields.io/github/release/Nemiroff/script.elementum.nova.svg)](https://github.com/Nemiroff/script.elementum.nova/releases/latest)
 
 A nova of providers.
 
