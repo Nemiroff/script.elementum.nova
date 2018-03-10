@@ -292,7 +292,7 @@
     "anime_extra": "",
     "anime_keywords": "{title} {episode}",
     "anime_query": "",
-    "base_url": "http://nnm-club.me/forum/tracker.php?nm=QUERYEXTRA&prev_sd=1&prev_a=1&prev_my=0&prev_n=0&prev_shc=1&prev_shf=0&prev_sha=0&prev_shs=1&prev_shr=0&prev_sht=0&o=10&s=2&tm=-1&a=1&sd=1&ta=-1&sns=-1&sds=-1&pn&submit=1",
+    "base_url": "http://nnmclub.to/forum/tracker.php?nm=QUERYEXTRA&prev_sd=1&prev_a=1&prev_my=0&prev_n=0&prev_shc=1&prev_shf=0&prev_sha=0&prev_shs=1&prev_shr=0&prev_sht=0&o=10&s=2&tm=-1&a=1&sd=1&ta=-1&sns=-1&sds=-1&pn&submit=1",
     "color": "FFFFFFFF",
     "general_extra": "",
     "general_keywords": "{title}",
@@ -312,10 +312,10 @@
       "row": "find_once('table', ('class', 'tablesorter'), order=1).find_all('tr', ('class', ['prow1', 'prow2']))",
       "seeds": "item(tag='td', order=6)",
       "size": "item(tag='td', order=4).split(' ', 1)[1]",
-      "torrent": "'http://nnm-club.me/forum/%s' % item(tag='a', attribute='href', order=2)"
+      "torrent": "'http://nnmclub.to/forum/%s' % item(tag='a', attribute='href', order=2)"
     },
     "private": true,
-    "root_url": "http://nnm-club.me",
+    "root_url": "http://nnmclub.to",
     "opennic_dns_alias": "http://nnm-club.lib",
     "season_extra": "",
     "season_extra2": "",
