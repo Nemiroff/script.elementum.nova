@@ -59,6 +59,9 @@ def search(payload, method="general"):
                              any(c in payload['titles']['source'] for c in special_chars)
     if payload['has_special']:
         log.debug("Query title contains special chars, so removing any quotes in the search query")
+    if 'absolute_number' in payload and 'ja' in payload['titles']:
+        log.info("Search anime ?")
+        method = "anime"
 
     global request_time
     global provider_names
