@@ -67,7 +67,7 @@ class Filtering:
             'filter_dvdscr': ['dvdscr'],
             'filter_screener': ['screener', '_scr_'],
             'filter_3d': ['_3d_'],
-            'filter_telesync': ['telesync', '_ts_', '_tc_'],
+            'filter_ts': ['telesync', '_ts_', '_tc_'],
             'filter_cam': ['_cam_', 'hdcam'],
             'filter_tvrip': ['_tvrip_', 'satrip'],
             'filter_vhsrip': ['vhsrip'],
