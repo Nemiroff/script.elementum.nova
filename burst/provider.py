@@ -256,6 +256,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         log.info('[%s] Search lostfilm serial ID...', provider)
                         url_search = url_search.replace('marvel_s_', '')
                         url_search = url_search.replace('dc_s_', '')
+                        url_search = url_search.replace('s_h_i_e_l_d', 'shield)
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
                         search_info = re.search(r'PlayEpisode\((.*?)\)">', client.content)
                         if search_info:
@@ -265,7 +266,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                             if redirect_url is not None:
                                 url_search = redirect_url.group(1)
                         else:
-                            log.info('[%s] Not found ID' % provider)
+                            log.info('[%s] Not found ID in %s' % (provider, url_search))
                             return filtering.results
 
         log.info(">  %s search URL: %s" % (definition['name'].rjust(longest), url_search))
