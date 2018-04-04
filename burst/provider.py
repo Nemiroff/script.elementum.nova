@@ -256,7 +256,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         log.info('[%s] Search lostfilm serial ID...', provider)
                         url_search = url_search.replace('marvel_s_', '')
                         url_search = url_search.replace('dc_s_', '')
-                        url_search = url_search.replace('s_h_i_e_l_d', 'shield)
+                        url_search = url_search.replace('s_h_i_e_l_d', 'shield')
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
                         search_info = re.search(r'PlayEpisode\((.*?)\)">', client.content)
                         if search_info:
