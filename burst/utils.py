@@ -135,7 +135,7 @@ def get_enabled_providers(method):
             contains = get_setting('%s_contains' % provider, choices=('All', 'Movies', 'Serials'))
             if not contains or contains == "0":
                 results.append(provider)
-            elif contains == type:
+            elif contains == type or type == "0":
                 results.append(provider)
         if 'custom' in definitions[provider] and definitions[provider]['custom']:
             results.append(provider)

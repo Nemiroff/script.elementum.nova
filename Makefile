@@ -21,12 +21,3 @@ clean_arch:
 clean:
 	rm -f $(ZIP_FILE)
 	rm -rf $(NAME)
-
-surge:
-	$(GIT) clone --depth=1 https://bitbucket.com/Tw1cker/nova-site.git
-	sed -i "s/version\s=\s\"\([0-9a-z\.\-]*\)\"/version = \"${VERSION}\"/" nova-site/public/index.jade
-	cd nova-site && harp compile . html/
-	mkdir -p nova-site/html/release/$(NAME)
-	cp addon.xml changelog.txt icon.png fanart.jpg nova-site/html/release/$(NAME)
-	cp *.zip nova-site/html/release/$(NAME)
-	cd nova-site && surge html nemiroff.surge.sh

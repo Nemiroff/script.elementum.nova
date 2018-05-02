@@ -23,7 +23,3 @@ deploy:
   on:
     repo: Nemiroff/script.elementum.nova
     tags: true
-
-after_deploy:
-- make surge
-- make clean
