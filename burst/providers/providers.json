@@ -122,7 +122,7 @@
     "tv_keywords": "{title:original} %2Fs{season:2}e01-",
     "tv_keywords2": ""
   },
-  "bluebird":{
+  "bluebird": {
     "anime_extra": "",
     "anime_keywords": "{title}",
     "anime_query": "",
@@ -141,13 +141,13 @@
     "movie_query": "&c1=1&c2=1&c3=1",
     "name": "BlueBird",
     "parser": {
-        "infohash": "",
-        "name": "item('a', order=3)",
-        "row": "find_once('tbody', ('id', 'highlighted'), order=1).find_all('tr', start=1)",
-        "size": "item('td', order=9)",
-        "seeds": "item(tag='td', order=7)",
-        "peers": "item(tag='td', order=8)",
-        "torrent": "'https://bluebird-hd.org/%s' % item(tag='a', attribute='href', order=3).replace('details.php', 'download.php')"
+      "infohash": "",
+      "name": "item('a', order=3)",
+      "peers": "item(tag='td', order=8)",
+      "row": "find_once('tbody', ('id', 'highlighted'), order=1).find_all('tr', start=1)",
+      "seeds": "item(tag='td', order=7)",
+      "size": "item('td', order=9)",
+      "torrent": "'https://bluebird-hd.org/%s' % item(tag='a', attribute='href', order=3).replace('details.php', 'download.php')"
     },
     "private": true,
     "root_url": "https://bluebird-hd.org/",
@@ -164,7 +164,7 @@
     "tv_keywords": "",
     "tv_keywords2": ""
   },
-  "casstudio":{
+  "casstudio": {
     "anime_extra": "",
     "anime_keywords": "",
     "anime_query": "",
@@ -230,7 +230,7 @@
       "row": "find_once('table', ('class', 't_peer'), order=1).find_all('tr', start=2)",
       "seeds": "item(tag='td', order=4)",
       "size": "item(tag='td', order=3)",
-      "torrent": "'https://s-kinozal-tv.appspot.com/getmagnet?%s' % item(tag='a', attribute='href', order=1).split('?', 1)[1]"
+      "torrent": "'https://kinozal-tv.appspot.com/get_srv_details.php?action=2&%s' % item(tag='a', attribute='href', order=1).split('?', 1)[1]"
     },
     "private": true,
     "root_url": "https://kinozal-tv.appspot.com",
@@ -388,6 +388,7 @@
     "movie_keywords": "{title} {year}",
     "movie_query": "",
     "name": "NNM-Club",
+    "opennic_dns_alias": "http://nnm-club.lib",
     "parser": {
       "infohash": "",
       "name": "item('a', order=1)",
@@ -399,7 +400,6 @@
     },
     "private": true,
     "root_url": "http://nnmclub.to",
-    "opennic_dns_alias": "http://nnm-club.lib",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title} \"Сезон {season}\"",
@@ -431,6 +431,7 @@
     "movie_keywords": "{title} {year}",
     "movie_query": "&&f%5B%5D=-1&f%5B%5D=1411&f%5B%5D=1410&f%5B%5D=1408&f%5B%5D=1407&f%5B%5D=1406&f%5B%5D=1974&f%5B%5D=1405&f%5B%5D=1403&f%5B%5D=1817&f%5B%5D=1402&f%5B%5D=1786&f%5B%5D=1982&f%5B%5D=1826&f%5B%5D=1983&f%5B%5D=1133&f%5B%5D=1132&f%5B%5D=1131&f%5B%5D=1130&f%5B%5D=1129&f%5B%5D=1128&f%5B%5D=1127&f%5B%5D=1126&f%5B%5D=1125&f%5B%5D=1124&f%5B%5D=1123&f%5B%5D=1122&f%5B%5D=1121&f%5B%5D=1120&f%5B%5D=1118&f%5B%5D=1117&f%5B%5D=1976&f%5B%5D=1809&f%5B%5D=1822&f%5B%5D=597&f%5B%5D=596&f%5B%5D=595&f%5B%5D=594&f%5B%5D=593&f%5B%5D=592&f%5B%5D=591&f%5B%5D=590&f%5B%5D=589&f%5B%5D=588&f%5B%5D=587&f%5B%5D=586&f%5B%5D=585&f%5B%5D=584&f%5B%5D=582&f%5B%5D=581&f%5B%5D=1978&f%5B%5D=20&f%5B%5D=21&f%5B%5D=22&f%5B%5D=23&f%5B%5D=24&f%5B%5D=25&f%5B%5D=26&f%5B%5D=27&f%5B%5D=29&f%5B%5D=30&f%5B%5D=31&f%5B%5D=32&f%5B%5D=33&f%5B%5D=1397&f%5B%5D=36&f%5B%5D=790&f%5B%5D=37&f%5B%5D=1977&f%5B%5D=616&f%5B%5D=614&f%5B%5D=613&f%5B%5D=612&f%5B%5D=611&f%5B%5D=610&f%5B%5D=609&f%5B%5D=608&f%5B%5D=607&f%5B%5D=606&f%5B%5D=605&f%5B%5D=604&f%5B%5D=603&f%5B%5D=602&f%5B%5D=600&f%5B%5D=599&f%5B%5D=1979&f%5B%5D=48&f%5B%5D=854&f%5B%5D=50&f%5B%5D=49&f%5B%5D=1980&f%5B%5D=1831&f%5B%5D=1830&f%5B%5D=1829&f%5B%5D=1828&f%5B%5D=1827&f%5B%5D=1825&f%5B%5D=1958&f%5B%5D=1943&f%5B%5D=1942&f%5B%5D=1941&f%5B%5D=1940&f%5B%5D=1939&f%5B%5D=1938&f%5B%5D=1937&f%5B%5D=1936&f%5B%5D=1935&f%5B%5D=1934&f%5B%5D=1933&f%5B%5D=1932&f%5B%5D=1931&f%5B%5D=1930",
     "name": "Rustorka",
+    "opennic_dns_alias": "http://rustorka.lib",
     "parser": {
       "infohash": "",
       "name": "item(tag='a', select=('class', 'genmed'), order=1)",
@@ -442,7 +443,6 @@
     },
     "private": true,
     "root_url": "http://rustorka.com",
-    "opennic_dns_alias": "http://rustorka.lib",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "\"{title}\" \"{season} Сезон\"",
@@ -461,7 +461,6 @@
     "anime_keywords": "{title}",
     "anime_query": "0/10/300/2/QUERYEXTRA",
     "base_url": "http://rutor.info/search/",
-    "opennic_dns_alias": "http://rutor.lib",
     "charset": "utf-8",
     "color": "FFFFDE00",
     "general_extra": "",
@@ -475,6 +474,7 @@
     "movie_keywords": "{title} {year}",
     "movie_query": "0/0/300/2/QUERYEXTRA",
     "name": "Rutor",
+    "opennic_dns_alias": "http://rutor.lib",
     "parser": {
       "infohash": "",
       "name": "item(tag='td', order=2)",
@@ -516,6 +516,7 @@
     "movie_keywords": "{title} {year}",
     "movie_query": "",
     "name": "RuTracker",
+    "opennic_dns_alias": "http://rutracker.lib",
     "parser": {
       "infohash": "",
       "name": "item('a', order=2)",
@@ -527,7 +528,6 @@
     },
     "private": true,
     "root_url": "http://rutracker.org",
-    "opennic_dns_alias": "http://rutracker.lib",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "\"{title}\" \"Сезон {season}\"",
@@ -586,8 +586,8 @@
     "anime_extra": "",
     "anime_keywords": "{title}",
     "anime_query": "",
-    "charset": "windows-1251",
     "base_url": "http://tfile-search.cc/?q=QUERYEXTRA&c=0&g=&act=&y=&ql=&a=&d=&o=&size_min=0&size_max=0",
+    "charset": "windows-1251",
     "color": "FFFFFFFF",
     "general_extra": "",
     "general_keywords": "{title}",

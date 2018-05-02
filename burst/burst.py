@@ -415,6 +415,13 @@ def extract_from_page(provider, content):
     definition = definitions[provider]
     definition = get_alias(definition, get_setting("%s_alias" % provider))
 
+    if provider == "kinozal":
+        matches = re.findall(r'\: (.{40})', content)  # kinozal
+        if matches:
+            result = "magnet:?xt=urn:btih:" + matches[0]
+            log.debug('[%s] Make magnet from info_hash: %s' % (provider, repr(result)))
+            return result
+
     matches = re.findall(r'magnet:\?[^\'"\s<>\[\]]+', content)
     if matches:
         result = matches[0]

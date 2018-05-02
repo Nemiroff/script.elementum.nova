@@ -1,73 +1,61 @@
 
 # Elementum Nova [![Build Status](https://travis-ci.org/Nemiroff/script.elementum.nova.svg?branch=master)](https://travis-ci.org/Nemiroff/script.elementum.nova) [![GitHub release](https://img.shields.io/github/release/Nemiroff/script.elementum.nova.svg)](https://github.com/Nemiroff/script.elementum.nova/releases/latest)
 
-A nova of providers.
+### Возможности
+- Ну вроде быстрый
+- Не требует установку дополнительных аддонов
+- Не требуется запуск сервиса в фоне
+- Простое включение и отключение профайдера в настройках. А так-же фильтрация их по типу контента
+- Возможность простого переназначения настроек провайдера без вмешательства в код плагина
 
 
-### Features
-- Fast, very fast
-- Compatible with Magnetic/Magnetizer, but **disable the Quasar/Elementum Connector**
-- Can extract providers, parsers and settings from Magnetic
-- No extra add-ons to install, all providers are included
-- No extra service running in the background
-- Easy settings to enable or disable providers and filters
-- First-class support with Elementum, and only Elementum (don't even ask)
-- Simple definitions-based architecture with overrides
-- Clean, PEP8 compliant code
+### Установка
 
+Скачайте последнюю версию с https://nemiroff.surge.sh
+Для Kodi 17 и выше включите в настройках Неизвестные источники
+Установите как обычный zip аддон.
+Для автообновления можно поставить репозиторий с https://nemiroff.github.com/kodi_repo/ или из search.db от bigbax
 
-### Installation
+### Добавление / редактирование провайдеров
 
-**IMPORTANT: Disable the Magnetic Quasar/Elementum Connector before anything else.**
+**В данный момент возможно добавление только открытых провайдера (без ввода логина и пароля) через .json
 
-Get the latest release from https://nemiroff.surge.sh
-
-Install the add-on and enjoy.
-
-### Adding / editing providers
-
-**Do NOT add definitions to the `definitions.json` file**, it is generated
-automatically by the Magnetic extraction script.
-
-Default fixes and overrides are located in `burst/providers/definitions.py`, and
-although you can edit that file directly, keep in mind that you will lose your
-changes on the next update. You can override existing definitions by adding
-another file named `overrides.py` in your profile folder, ie. in
-`~/.kodi/userdata/addon_data/script.elementum.nova/overrides.py`. Put all your
-overrides in the `overrides` variable within that file, as such:
+Вы можете изменить любой параметр провайдера в файле `providers.json`, но ваши изменения будут потеряны при следующем обновлении.
+Для того, чтобы этого не произошло Вам требуется создать файл `overrides.py` в папке профиля,
+например: `~/.kodi/userdata/addon_data/script.elementum.nova/overrides.py`. 
+Поместите Ваши изменения в переменную `overrides` что бы выглядело так:
 ```
 overrides = {
-    'torlock': {
-        'name': 'MyTorLock'
+    'lostfilm': {
+        'name': 'LostFilm.TV'
     }
 }
 ```
-
-Adding a custom provider is similar, although you'll be using a JSON file, per
-provider or with all your custom providers, unless you add them all in your
-custom `overrides.py`, which also works. Simply create a file with the `.json`
-extension under the `providers` folder in your profile, ie. in
-`~/.kodi/userdata/addon_data/script.elementum.nova/providers/nice_provider.json`
-and make sure it follows the format below (hopefully with `"subpage": false`):
+Добавление пользовательского провайдера не сложно, хоть вы будете использовать файл JSON.
+Можно использовать файл для каждого провайдера отдельно или один со всеми вашими провайдерами.
+Просто создайте файл с расширением `.json` в папке `providers` которая находится в Вашем профиле, например:
+`~/.kodi/userdata/addon_data/script.elementum.nova/providers/lostfilm.json`
+содержащим (желательно с `"subpage": false`):
 ```
 {
-    "1337x": {
+    "lostfilm": {
         "anime_extra": "",
-        "anime_keywords": "{title} {episode}",
+        "anime_keywords": "{title:original} {episode}",
         "anime_query": "EXTRA",
-        "base_url": "http://www.1337x.to/search/QUERY/1/",
+        "base_url": "http://www.lostfilm.tv/search/QUERY/1/",
         "color": "FFF14E13",
         "general_extra": "",
         "general_keywords": "{title}",
         "general_query": "EXTRA",
         "language": null,
+        "charset": "windows-1251",
         "login_failed": "",
         "login_object": "",
         "login_path": null,
         "movie_extra": "",
         "movie_keywords": "{title} {year}",
         "movie_query": "EXTRA",
-        "name": "1337x",
+        "name": "LostFilm",
         "parser": {
             "infohash": "",
             "name": "item('a', order=2)",
@@ -80,7 +68,7 @@ and make sure it follows the format below (hopefully with `"subpage": false`):
         "private": false,
         "season_extra": "",
         "season_extra2": "",
-        "season_keywords": "{title} Season {season:2}",
+        "season_keywords": "{title:ru} Season {season:2}",
         "season_keywords2": "{title} Season{season}",
         "season_query": "EXTRA",
         "separator": "+",
@@ -94,8 +82,8 @@ and make sure it follows the format below (hopefully with `"subpage": false`):
 }
 ```
 
-### Credits
-- @scakemyer for initial Quasar Burst module!
-- @mancuniancol for all his work on Magnetic, this add-on wouldn't have been possible without him.
-- @elgatito for create Elementum
-- All the alpha and beta testers that led to the first stable release.
+### Благодарности
+- @scakemyer за написаный Quasar Burst модуль!
+- @mancuniancol за его работу над Magnetic, этот аддон не появился без него.
+- @elgatito за продолжения Quasar в Elementum.
+- Ну и всем пользователям с XBMC.ru.
