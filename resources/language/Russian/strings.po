@@ -205,3 +205,7 @@ msgstr "Отключить укорачивание списка раздач"
 msgctxt "#32088"
 msgid "Sort results by resolution"
 msgstr "Сортировать список по разрешению"
+
+msgctxt "#32089"
+msgid "Login failed"
+msgstr "Авторизация не удалась"

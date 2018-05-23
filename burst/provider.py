@@ -13,7 +13,8 @@ import xbmcaddon
 from client import Client
 from elementum.provider import log, get_setting, set_setting
 from providers.definitions import definitions, longest
-from utils import ADDON_PATH, get_int, clean_size, get_alias
+from utils import ADDON_PATH, get_int, clean_size, get_alias, notify, translation, get_icon_path
+from providers.helpers import fix_lf
 
 def generate_payload(provider, generator, filtering, verify_name=True, verify_size=True):
     """ Payload formatter to format results the way Elementum expects them
@@ -249,14 +250,13 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                 elif not logged_in:
                     log.error("[%s] Login failed: %s", provider, client.status)
                     log.debug("[%s] Failed login content: %s", provider, repr(client.content))
+                    notify(translation(32089), image=get_icon_path())
                     return filtering.results
 
                 if logged_in:
                     if provider == 'lostfilm':
                         log.info('[%s] Search lostfilm serial ID...', provider)
-                        url_search = url_search.replace('marvel_s_', '')
-                        url_search = url_search.replace('dc_s_', '')
-                        url_search = url_search.replace('s_h_i_e_l_d', 'shield')
+                        url_search = fix_lf(url_search)
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
                         search_info = re.search(r'PlayEpisode\((.*?)\)">', client.content)
                         if search_info:

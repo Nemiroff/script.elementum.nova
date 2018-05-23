@@ -21,3 +21,10 @@ def t411episode(episode):
     if 30 < episode < 61:
         real_ep = episode + 1057
     return real_ep
+
+def fix_lf(url):
+    url = url.replace('marvel_s_', '')
+    url = url.replace('dc_s_', '')
+    url = url.replace('s_h_i_e_l_d', 'shield')
+    url = url.replace('_s_', 's_')
+    return url
