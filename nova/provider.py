@@ -50,7 +50,7 @@ def generate_payload(provider, generator, filtering, verify_name=True, verify_si
                                 "peers": get_int(peers),
                                 "language": definition["language"] if 'language' in definition else 'en',
                                 "provider": '[COLOR %s]%s[/COLOR]' % (definition['color'], definition['name']),
-                                "icon": os.path.join(ADDON_PATH, 'burst', 'providers', 'icons', '%s.png' % provider),
+                                "icon": os.path.join(ADDON_PATH, 'nova', 'providers', 'icons', '%s.png' % provider),
                                 "resolution": get_int(filtering.determine_resolution(v_name)[7:-1]),
                                 })
             else:
@@ -62,7 +62,7 @@ def generate_payload(provider, generator, filtering, verify_name=True, verify_si
                                 "peers": get_int(peers),
                                 "language": definition["language"] if 'language' in definition else 'en',
                                 "provider": '[COLOR %s]%s[/COLOR]' % (definition['color'], definition['name']),
-                                "icon": os.path.join(ADDON_PATH, 'burst', 'providers', 'icons', '%s.png' % provider),
+                                "icon": os.path.join(ADDON_PATH, 'nova', 'providers', 'icons', '%s.png' % provider),
                                 })
         else:
             log.debug(filtering.reason.encode('utf-8'))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Burst processing thread
+Nova processing thread
 """
 
 import re
@@ -80,7 +80,7 @@ def search(payload, method="general"):
         log.error("No providers enabled")
         return []
 
-    log.info("Burstin' with %s" % ", ".join([definitions[provider]['name'] for provider in providers]))
+    log.info("Searching' with %s" % ", ".join([definitions[provider]['name'] for provider in providers]))
 
     if get_setting("use_cloudhole", bool):
         clearance, user_agent = get_cloudhole_clearance(get_cloudhole_key())

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Burst utilities
+Nova utilities
 """
 
 import os
@@ -143,10 +143,10 @@ def get_enabled_providers(method):
 
 
 def get_icon_path():
-    """ Utility method to Burst's icon path
+    """ Utility method to Nova's icon path
 
     Returns:
-        str: Path to Burst's icon
+        str: Path to Nova's icon
     """
     return os.path.join(ADDON_PATH, 'icon.png')
 
@@ -315,7 +315,7 @@ def notify(message, image=None):
 
 
 def clear_cache():
-    """ Clears cookies from Burst's cache
+    """ Clears cookies from nova's cache
     """
     cookies_path = os.path.join(xbmc.translatePath("special://temp"), "nova")
     if os.path.isdir(cookies_path):

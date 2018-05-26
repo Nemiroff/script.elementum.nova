@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from burst.burst import search
+from nova.nova import search
 from elementum.provider import register
 
 
