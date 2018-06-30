@@ -70,7 +70,7 @@ class Filtering:
             'filter_cam': ['_cam_', 'hdcam'],
             'filter_tvrip': ['_tvrip_', 'satrip'],
             'filter_vhsrip': ['vhsrip'],
-            'filter_trailer': ['trailer'],
+            'filter_trailer': ['trailer', u'трейлер', u'тизер'],
             'filter_workprint': ['workprint']
         }
 
