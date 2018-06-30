@@ -209,7 +209,7 @@
     "anime_extra": "",
     "anime_keywords": "{title:ru} {episode}",
     "anime_query": "",
-    "base_url": "https://kinozal-tv.appspot.com/browse.php?s=QUERYEXTRA&g=0&c=0&v=0&d=0&w=0&t=1&f=0",
+    "base_url": "https://kinozal.guru/browse.php?s=QUERYEXTRA&g=0&c=0&v=0&d=0&w=0&t=1&f=0",
     "charset": "windows-1251",
     "color": "FFFFFFFF",
     "general_extra": "",
@@ -230,10 +230,10 @@
       "row": "find_once('table', ('class', 't_peer'), order=1).find_all('tr', start=2)",
       "seeds": "item(tag='td', order=4)",
       "size": "item(tag='td', order=3)",
-      "torrent": "'https://kinozal-tv.appspot.com/get_srv_details.php?action=2&%s' % item(tag='a', attribute='href', order=1).split('?', 1)[1]"
+      "torrent": "'https://kinozal.guru/get_srv_details.php?action=2&%s' % item(tag='a', attribute='href', order=1).split('?', 1)[1]"
     },
     "private": true,
-    "root_url": "https://kinozal-tv.appspot.com",
+    "root_url": "https://kinozal.guru",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:ru} {season}+Сезон",
