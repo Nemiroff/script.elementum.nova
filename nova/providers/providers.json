@@ -126,7 +126,7 @@
     "anime_extra": "",
     "anime_keywords": "{title}",
     "anime_query": "",
-    "base_url": "https://bluebird-hd.org/browse.php?search=QUERYEXTRA&incldead=0&dsearch=&stype=and",
+    "base_url": "https://bluebird-hd.org/browse.php?webdl=0&3d=0&search=QUERYEXTRA&incldead=0&dsearch=&stype=and&sort=7&type=desc",
     "charset": "windows-1251",
     "color": "FFFFFFFF",
     "general_extra": "",
@@ -137,7 +137,7 @@
     "login_object": "{'username': USERNAME, 'password': PASSWORD}",
     "login_path": "/takelogin.php",
     "movie_extra": "",
-    "movie_keywords": "{title:original} {year}",
+    "movie_keywords": "{title:original} ({year})",
     "movie_query": "&c1=1&c2=1&c3=1",
     "name": "BlueBird",
     "parser": {
@@ -154,15 +154,15 @@
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original} [Season {season}]",
-    "season_keywords2": "",
+    "season_keywords2": "{title:original} [Сезон {season}]",
     "season_query": "&c6=1",
     "separator": "+",
     "show_query": "",
     "subpage": false,
     "tv_extra": "",
     "tv_extra2": "",
-    "tv_keywords": "",
-    "tv_keywords2": ""
+    "tv_keywords": "{title:original} s{season:2}e{episode:2}",
+    "tv_keywords2": "{title:original} Сезон {season}"
   },
   "casstudio": {
     "anime_extra": "",
