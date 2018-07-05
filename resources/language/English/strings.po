@@ -191,8 +191,8 @@ msgid "Allow no seeds"
 msgstr ""
 
 msgctxt "#32085"
-msgid "Experemental"
-msgstr "Эксперемент"
+msgid "Experimental"
+msgstr ""
 
 msgctxt "#32086"
 msgid "Warning!"

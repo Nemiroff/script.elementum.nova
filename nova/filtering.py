@@ -5,10 +5,11 @@ Nova filtering class and methods
 """
 
 import re
+import string
 import hashlib
+from urllib import unquote
 from parser.HTMLParser import HTMLParser
 from elementum.provider import log, get_setting
-from normalize import normalize_string
 from providers.definitions import definitions
 from utils import Magnet, get_int, get_float, clean_number, size_int, get_alias
 
@@ -318,7 +319,7 @@ class Filtering:
                                 title = self.info['titles']['original']
                         if use_language in self.info['titles'] and self.info['titles'][use_language]:
                             title = self.info['titles'][use_language]
-                            title = normalize_string(title)
+                            title = self.normalize_name(title)
                             log.info("[%s] Using translated '%s' title %s" % (provider, use_language, repr(title)))
                             log.debug("[%s] Translated titles from Elementum: %s" % (provider, repr(self.info['titles'])))
                     except Exception as e:
@@ -369,9 +370,9 @@ class Filtering:
             self.reason = '[%s] %s' % (provider, '*** Empty name ***')
             return False
 
-        name = normalize_string(name)
+        name = self.normalize_name(name)
         if self.filter_title and self.title:
-            self.title = normalize_string(self.title)
+            self.title = self.normalize_name(self.title)
 
         self.reason = "[%s] %70s ***" % (provider, name)
 
@@ -437,6 +438,28 @@ class Filtering:
             if self.included(name, keys=self.resolutions[resolution], strict=True):
                 res = resolution
         return res
+
+    def normalize_name(self, value):
+        """ Method to normalize strings
+
+        Replaces punctuation with spaces, unquotes and unescapes HTML characters.
+
+        Args:
+            value (str): File name or directory string to convert
+
+        Returns:
+            str: Converted file name or directory string
+        """
+        value = unquote(value)
+        value = self.unescape(value)
+        value = value.lower()
+
+        for p in string.punctuation:
+            value = value.replace(p, ' ')
+
+        value = ' '.join(value.split())
+
+        return value
 
     def included(self, value, keys, strict=False):
         """ Check if the keys are present in the string

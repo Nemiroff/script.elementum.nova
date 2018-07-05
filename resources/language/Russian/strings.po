@@ -191,8 +191,8 @@ msgid "Allow no seeds"
 msgstr "Показывать раздачи без сидеров"
 
 msgctxt "#32085"
-msgid "Experemental"
-msgstr "Эксперемент"
+msgid "Experimental"
+msgstr "Эксперимент"
 
 msgctxt "#32086"
 msgid "Warning!"
