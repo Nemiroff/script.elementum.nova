@@ -51,8 +51,8 @@ class Filtering:
         resolutions = OrderedDict()
         resolutions['filter_240p'] = ['240p', u'240р', '_tvrip_', 'satrip', 'vhsrip']
         resolutions['filter_480p'] = ['480p', u'480р', 'xvid', 'dvd', 'dvdrip', 'hdtv']
-        resolutions['filter_720p'] = ['720p', u'720р', '720i', 'hdrip', 'bluray', 'blu_ray', 'brrip', 'bdrip']
-        resolutions['filter_1080p'] = ['1080p', u'1080р', '1080i', 'fullhd', '_fhd_']
+        resolutions['filter_720p'] = ['720p', u'720р', '720i', '/hd720p', 'hdrip', 'bluray', 'blu_ray', 'brrip', 'bdrip']
+        resolutions['filter_1080p'] = ['1080p', u'1080р', '1080i', 'fullhd', '_fhd_', '/hd1080p', '/hdr1080p']
         resolutions['filter_1440p'] = ['_2k_', '1440p', u'1440р', '2k', u'2к']
         resolutions['filter_2160p'] = ['_4k_', '2160p', u'2160р', 'uhd', '4k', u'4к']
         resolutions['filter_remux'] = ['remux', 'bd_remux', 'blu-ray_disc']

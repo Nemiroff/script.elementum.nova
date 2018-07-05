@@ -120,7 +120,7 @@
     "tv_extra": "",
     "tv_extra2": "",
     "tv_keywords": "{title:original} %2Fs{season:2}e01-",
-    "tv_keywords2": ""
+    "tv_keywords2": "{title:original} %2Fs{season:2}e{episode:2}"
   },
   "bluebird": {
     "anime_extra": "",
