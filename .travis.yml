@@ -10,8 +10,6 @@ script:
 - ./scripts/xgettext.sh
 
 before_deploy:
-- npm install -g harp
-- npm install -g surge
 - make
 
 deploy:
