@@ -292,7 +292,7 @@
     "anime_extra": "",
     "anime_keywords": "{title:ru}",
     "anime_query": "",
-    "base_url": "http://megapeer.org/browse.php?search=QUERYEXTRA&age=&cat=0&stype=0&sort=0&ascdesc=0",
+    "base_url": "http://megapeer.ru/browse.php?search=QUERYEXTRA&age=&cat=0&stype=0&sort=0&ascdesc=0",
     "charset": "windows-1251",
     "color": "FFFFFFFF",
     "general_extra": "",
@@ -313,10 +313,10 @@
       "row": "find_once('table', ('id', 'tor-tbl'), order=1).find_all('tr')",
       "seeds": "item(tag='span', select=('class', 'seedmed'), order=1)",
       "size": "item(tag='a', select=('class', 'tr-dl'), order=1)",
-      "torrent": "'http://megapeer.org/%s' % item(tag='a', select=('class', 'tr-dl'), attribute='href', order=1)"
+      "torrent": "'http://megapeer.ru/%s' % item(tag='a', select=('class', 'tr-dl'), attribute='href', order=1)"
     },
     "private": false,
-    "root_url": "http://megapeer.org",
+    "root_url": "http://megapeer.ru",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original} {season} сезон",
