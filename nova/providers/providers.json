@@ -566,10 +566,10 @@
       "row": "find_once('table', ('id', 'topics'), order=1).find_all('tr', start=2)",
       "seeds": "item(tag='td', order=5)",
       "size": "item(tag='td', order=4)",
-      "torrent": "'http://tfile.cc/forum/viewtopic.php?t=%s' % item(attribute='id')[1:]"
+      "torrent": "'http://tfile-home.org/forum/viewtopic.php?t=%s' % item(attribute='id')[1:]"
     },
     "private": false,
-    "root_url": "http://tfile.cc/",
+    "root_url": "http://tfile-home.org/",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original} Сезон {season}",
