@@ -258,9 +258,9 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         log.info('[%s] Search lostfilm serial ID...', provider)
                         url_search = fix_lf(url_search)
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
-                        search_info = re.search(r'PlayEpisode\((.*?)\)">', client.content)
+                        search_info = re.search(r'rel="(.*?)">', client.content)
                         if search_info:
-                            series_details = re.search('\'(\d+)\',\'(\d+)\',\'(\d+)\'', search_info.group(1))
+                            series_details = re.search('(\d+),(\d+),(\d+)', search_info.group(1))
                             client.open(definition['root_url'] + '/v_search.php?c=%s&s=%s&e=%s' % (series_details.group(1), series_details.group(2), series_details.group(3)))
                             redirect_url = re.search(ur'url=(.*?)">', client.content)
                             if redirect_url is not None:
