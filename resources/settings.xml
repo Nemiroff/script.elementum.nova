@@ -25,102 +25,103 @@
       <setting id="tfile_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
     <setting label="32014" type="lsep" />
-    <setting label="0day" id="use_0day" type="bool" default="false" />
+    <!-- Providers-Private-Begin -->
+    <setting label="[B]0day[/B]" id="use_0day" type="bool" default="false" />
       <setting id="0day_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="0day_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="0day_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="0day_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="NewStudio" id="use_newstudio" type="bool" default="false" />
+    <setting label="[B]NewStudio[/B]" id="use_newstudio" type="bool" default="false" />
       <setting id="newstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="newstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="newstudio_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="newstudio_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="NNM-Club" id="use_nnmclub" type="bool" default="false" />
+    <setting label="[B]NNM-Club[/B]" id="use_nnmclub" type="bool" default="false" />
       <setting id="nnmclub_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="nnmclub_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="nnmclub_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="nnmclub_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="RuTracker" id="use_rutracker" type="bool" default="false" />
+    <setting label="[B]RuTracker[/B]" id="use_rutracker" type="bool" default="false" />
       <setting id="rutracker_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="rutracker_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="rutracker_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="rutracker_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="BaibaKo.TV" id="use_baibako" type="bool" default="false" />
+    <setting label="[B]BaibaKo.TV[/B]" id="use_baibako" type="bool" default="false" />
       <setting id="baibako_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="baibako_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="baibako_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="baibako_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="torrent3d.ru" id="use_torrent3dru" type="bool" default="false" />
+    <setting label="[B]torrent3d.ru[/B]" id="use_torrent3dru" type="bool" default="false" />
       <setting id="torrent3dru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="torrent3dru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="torrent3dru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="torrent3dru_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="3d-tracker.ru" id="use_3dtrackerru" type="bool" default="false" />
+    <setting label="[B]3d-tracker.ru[/B]" id="use_3dtrackerru" type="bool" default="false" />
       <setting id="3dtrackerru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="3dtrackerru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="3dtrackerru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="3dtrackerru_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="Rustorka" id="use_rustorka" type="bool" default="false" />
+    <setting label="[B]Rustorka[/B]" id="use_rustorka" type="bool" default="false" />
       <setting id="rustorka_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="rustorka_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="rustorka_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="rustorka_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="LostFilm.TV" id="use_lostfilm" type="bool" default="false" />
+    <setting label="[B]LostFilm.TV[/B]" id="use_lostfilm" type="bool" default="false" />
       <setting id="lostfilm_username" label="32082" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="lostfilm_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="lostfilm_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="KinoZal.TV" id="use_kinozal" type="bool" default="false" />
+    <setting label="[B]KinoZal.TV[/B]" id="use_kinozal" type="bool" default="false" />
       <setting id="kinozal_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="kinozal_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="kinozal_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="CasStudio.TV" id="use_casstudio" type="bool" default="false" />
+    <setting label="[B]CasStudio.TV[/B]" id="use_casstudio" type="bool" default="false" />
       <setting id="casstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="casstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="casstudio_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="casstudio_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="BlueBird" id="use_bluebird" type="bool" default="false" />
+    <setting label="[B]BlueBird[/B]" id="use_bluebird" type="bool" default="false" />
       <setting id="bluebird_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="bluebird_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="bluebird_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="bluebird_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
   </category>
   <category label="32002">
-    <setting label="Remux/Blu-Ray Disk" id="filter_remux" type="bool" default="false" />
-    <setting label="4K/2160p" id="filter_2160p" type="bool" default="true" />
-    <setting label="2K/1440p" id="filter_1440p" type="bool" default="true" />
-    <setting label="1080p" id="filter_1080p" type="bool" default="true" />
-    <setting label="720p" id="filter_720p" type="bool" default="true" />
-    <setting label="480p" id="filter_480p" type="bool" default="true" />
-    <setting label="240p" id="filter_240p" type="bool" default="false" />
+    <setting label="[B]Remux/Blu-Ray Disk[/B]" id="filter_remux" type="bool" default="false" />
+    <setting label="[B]4K/2160p[/B]" id="filter_2160p" type="bool" default="true" />
+    <setting label="[B]2K/1440p[/B]" id="filter_1440p" type="bool" default="true" />
+    <setting label="[B]1080p[/B]" id="filter_1080p" type="bool" default="true" />
+    <setting label="[B]720p[/B]" id="filter_720p" type="bool" default="true" />
+    <setting label="[B]480p[/B]" id="filter_480p" type="bool" default="true" />
+    <setting label="[B]240p[/B]" id="filter_240p" type="bool" default="false" />
   </category>
   <category label="32003">
-    <setting label="BRRip/BDRip/Bluray" id="filter_brrip" type="bool" default="true" />
-    <setting label="WebDL/WebRip" id="filter_webdl" type="bool" default="true" />
-    <setting label="HDRip" id="filter_hdrip" type="bool" default="true" />
-    <setting label="HDTV" id="filter_hdtv" type="bool" default="true" />
-    <setting label="DVDRip" id="filter_dvd" type="bool" default="true" />
-    <setting label="DVDScr" id="filter_dvdscr" type="bool" default="true" />
-    <setting label="Screener/SCR" id="filter_screener" type="bool" default="true" />
-    <setting label="3D" id="filter_3d" type="bool" default="false" />
-    <setting label="TeleSync/TS/TC" id="filter_ts" type="bool" default="false" />
-    <setting label="Cam/HDCam" id="filter_cam" type="bool" default="false" />
-    <setting label="TVRip/SATRip" id="filter_tvrip" type="bool" default="false" />
-    <setting label="VHSRip" id="filter_vhsrip" type="bool" default="false" />
-    <setting label="Trailer" id="filter_trailer" type="bool" default="false" />
-    <setting label="Workprint" id="filter_workprint" type="bool" default="false" />
+    <setting label="[B]BRRip/BDRip/Bluray[/B]" id="filter_brrip" type="bool" default="true" />
+    <setting label="[B]WebDL/WebRip[/B]" id="filter_webdl" type="bool" default="true" />
+    <setting label="[B]HDRip[/B]" id="filter_hdrip" type="bool" default="true" />
+    <setting label="[B]HDTV[/B]" id="filter_hdtv" type="bool" default="true" />
+    <setting label="[B]DVDRip[/B]" id="filter_dvd" type="bool" default="true" />
+    <setting label="[B]DVDScr[/B]" id="filter_dvdscr" type="bool" default="true" />
+    <setting label="[B]Screener/SCR[/B]" id="filter_screener" type="bool" default="true" />
+    <setting label="[B]3D[/B]" id="filter_3d" type="bool" default="false" />
+    <setting label="[B]TeleSync/TS/TC[/B]" id="filter_ts" type="bool" default="false" />
+    <setting label="[B]Cam/HDCam[/B]" id="filter_cam" type="bool" default="false" />
+    <setting label="[B]TVRip/SATRip[/B]" id="filter_tvrip" type="bool" default="false" />
+    <setting label="[B]VHSRip[/B]" id="filter_vhsrip" type="bool" default="false" />
+    <setting label="[B]Trailer[/B]" id="filter_trailer" type="bool" default="false" />
+    <setting label="[B]Workprint[/B]" id="filter_workprint" type="bool" default="false" />
   </category>
   <category label="32004">
     <setting label="32035" id="separate_sizes" type="bool" default="false" />

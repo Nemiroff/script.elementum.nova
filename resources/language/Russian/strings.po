@@ -131,7 +131,7 @@ msgid "Starting..."
 msgstr "Запуск…"
 
 msgctxt "#32062"
-msgid "%d providers left"
+msgid "[B]%d providers left[/B]"
 msgstr "Провайдеров осталось: %d"
 
 msgctxt "#32063"
