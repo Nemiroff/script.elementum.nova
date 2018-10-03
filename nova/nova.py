@@ -8,6 +8,7 @@ import re
 import json
 import time
 import xbmc
+import xbmcaddon
 import xbmcgui
 from Queue import Queue
 from threading import Thread
@@ -25,9 +26,18 @@ provider_names = []
 provider_results = []
 available_providers = 0
 request_time = time.time()
+auto_timeout = get_setting("auto_timeout", bool)
 timeout = get_setting("timeout", int)
 special_chars = "()\"':.[]<>/\\?"
 
+if auto_timeout:
+    elementum_addon = xbmcaddon.Addon(id="plugin.video.elementum")
+    if elementum_addon:
+        if elementum_addon.getSetting("custom_provider_timeout_enabled") == "true":
+            timeout = int(elementum_addon.getSetting("custom_provider_timeout"))
+        else:
+            timeout = 28
+        log.debug("Using timeout from Elementum: $d sec" % (timeout))
 
 def search(payload, method="general"):
     """ Main search entrypoint
@@ -68,6 +78,9 @@ def search(payload, method="general"):
     if 'absolute_number' in payload and 'ja' in payload['titles']:
         log.info("Search anime ?")
         method = "anime"
+
+    if "proxy_url" not in payload:
+        payload["proxy_url"] = ""
 
     global request_time
     global provider_names
