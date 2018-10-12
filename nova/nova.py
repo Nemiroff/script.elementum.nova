@@ -37,7 +37,7 @@ if auto_timeout:
             timeout = int(elementum_addon.getSetting("custom_provider_timeout"))
         else:
             timeout = 28
-        log.debug("Using timeout from Elementum: $d sec" % (timeout))
+        log.debug("Using timeout from Elementum: %d sec" % (timeout))
 
 def search(payload, method="general"):
     """ Main search entrypoint
