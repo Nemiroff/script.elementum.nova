@@ -12,13 +12,13 @@
   </category>
   <category label="32001">
     <setting label="32012" type="lsep" />
+    <setting label="Megapeer" id="use_megapeer" type="bool" default="false" />
+      <setting id="megapeer_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="megapeer_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
+
     <setting label="Rutor" id="use_rutor" type="bool" default="false" />
       <setting id="rutor_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="rutor_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
-
-    <setting label="MegaPeer" id="use_megapeer" type="bool" default="false" />
-      <setting id="megapeer_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="megapeer_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
     <setting label="TFile" id="use_tfile" type="bool" default="false" />
       <setting id="tfile_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
@@ -32,6 +32,36 @@
       <setting id="0day_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="0day_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
+    <setting label="[B]BaibaKo.TV[/B]" id="use_baibako" type="bool" default="false" />
+      <setting id="baibako_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="baibako_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="baibako_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="baibako_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+
+    <setting label="[B]BlueBird[/B]" id="use_bluebird" type="bool" default="false" />
+      <setting id="bluebird_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="bluebird_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="bluebird_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="bluebird_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+
+    <setting label="[B]CasStudio.TV[/B]" id="use_casstudio" type="bool" default="false" />
+      <setting id="casstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="casstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="casstudio_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="casstudio_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+
+    <setting label="[B]KinoZal.TV[/B]" id="use_kinozal" type="bool" default="false" />
+      <setting id="kinozal_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="kinozal_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="kinozal_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+
+    <setting label="[B]LostFilm.TV[/B]" id="use_lostfilm" type="bool" default="false" />
+      <setting id="lostfilm_username" label="32082" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="lostfilm_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="lostfilm_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+
     <setting label="[B]NewStudio[/B]" id="use_newstudio" type="bool" default="false" />
       <setting id="newstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="newstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
@@ -44,47 +74,23 @@
       <setting id="nnmclub_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="nnmclub_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="[B]RuTracker[/B]" id="use_rutracker" type="bool" default="false" />
-      <setting id="rutracker_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="rutracker_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="rutracker_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="rutracker_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
-    <setting label="[B]BaibaKo.TV[/B]" id="use_baibako" type="bool" default="false" />
-      <setting id="baibako_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="baibako_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="baibako_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="baibako_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
     <setting label="[B]Rustorka[/B]" id="use_rustorka" type="bool" default="false" />
       <setting id="rustorka_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="rustorka_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="rustorka_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="rustorka_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="[B]LostFilm.TV[/B]" id="use_lostfilm" type="bool" default="false" />
-      <setting id="lostfilm_username" label="32082" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="lostfilm_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="lostfilm_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+    <setting label="[B]RuTracker[/B]" id="use_rutracker" type="bool" default="false" />
+      <setting id="rutracker_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="rutracker_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="rutracker_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="rutracker_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="[B]KinoZal.TV[/B]" id="use_kinozal" type="bool" default="false" />
-      <setting id="kinozal_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="kinozal_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="kinozal_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="kinozal_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
-    <setting label="[B]CasStudio.TV[/B]" id="use_casstudio" type="bool" default="false" />
-      <setting id="casstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="casstudio_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="casstudio_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="casstudio_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
-    <setting label="[B]BlueBird[/B]" id="use_bluebird" type="bool" default="false" />
-      <setting id="bluebird_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="bluebird_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="bluebird_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="bluebird_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
+    <setting label="[B]Toloka[/B]" id="use_toloka" type="bool" default="false" />
+      <setting id="toloka_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="toloka_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
+      <setting id="toloka_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting id="toloka_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
   </category>
   <category label="32002">
     <setting label="[B]Remux/Blu-Ray Disk[/B]" id="filter_remux" type="bool" default="false" />
