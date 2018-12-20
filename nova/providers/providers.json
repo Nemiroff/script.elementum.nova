@@ -433,7 +433,6 @@
     "movie_keywords": "{title} {year}",
     "movie_query": "0/0/300/2/QUERYEXTRA",
     "name": "Rutor",
-    "opennic_dns_alias": "http://rutor.lib",
     "parser": {
       "infohash": "",
       "name": "item(tag='td', order=2)",
