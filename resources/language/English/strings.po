@@ -154,10 +154,6 @@ msgctxt "#32075"
 msgid "No torrents found"
 msgstr ""
 
-msgctxt "#32076"
-msgid "Passkey"
-msgstr ""
-
 msgctxt "#32077"
 msgid "Domain Alias [Optional]"
 msgstr ""
@@ -207,7 +203,7 @@ msgid "Sort results by resolution"
 msgstr ""
 
 msgctxt "#32089"
-msgid "Login failed"
+msgid "Login {0} failed"
 msgstr ""
 
 msgctxt "#32090"

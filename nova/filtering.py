@@ -12,11 +12,7 @@ from parser.HTMLParser import HTMLParser
 from elementum.provider import log, get_setting
 from providers.definitions import definitions
 from utils import Magnet, get_int, get_float, clean_number, size_int, get_alias
-
-try:
-    from collections import OrderedDict
-except:
-    from ordereddict import OrderedDict
+from collections import OrderedDict
 
 
 class Filtering:

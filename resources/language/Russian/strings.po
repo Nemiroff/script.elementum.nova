@@ -131,7 +131,7 @@ msgid "Starting..."
 msgstr "Запуск…"
 
 msgctxt "#32062"
-msgid "[B]%d providers left[/B]"
+msgid "%d providers left"
 msgstr "Провайдеров осталось: %d"
 
 msgctxt "#32063"
@@ -153,10 +153,6 @@ msgstr "Значения тайм-аута должно быть меньше ч
 msgctxt "#32075"
 msgid "No torrents found"
 msgstr "Не найден ни один торрент"
-
-msgctxt "#32076"
-msgid "Passkey"
-msgstr ""
 
 msgctxt "#32077"
 msgid "Domain Alias [Optional]"
@@ -207,8 +203,8 @@ msgid "Sort results by resolution"
 msgstr "Сортировать список по разрешению"
 
 msgctxt "#32089"
-msgid "Login failed"
-msgstr "Авторизация не удалась"
+msgid "Login {0} failed"
+msgstr "Авторизация {0} не удалась"
 
 msgctxt "#32090"
 msgid "Log debug messages for parsing"
@@ -216,4 +212,4 @@ msgstr "Писать в лог сообщения парсера"
 
 msgctxt "#32091"
 msgid "Automatically adjust timeout according to Elementum settings"
-msgstr "Автоматически опрелять таймаут по настройкам Elementum"
+msgstr "Автоматически определять таймаут по настройкам Elementum"
