@@ -56,18 +56,6 @@
       <setting id="baibako_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="baibako_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
-    <setting label="[B]torrent3d.ru[/B]" id="use_torrent3dru" type="bool" default="false" />
-      <setting id="torrent3dru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="torrent3dru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="torrent3dru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="torrent3dru_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
-    <setting label="[B]3d-tracker.ru[/B]" id="use_3dtrackerru" type="bool" default="false" />
-      <setting id="3dtrackerru_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="3dtrackerru_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="3dtrackerru_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="3dtrackerru_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
     <setting label="[B]Rustorka[/B]" id="use_rustorka" type="bool" default="false" />
       <setting id="rustorka_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="rustorka_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
