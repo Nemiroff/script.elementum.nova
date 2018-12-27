@@ -112,7 +112,7 @@ msgstr "Максимальна кіл-ть результатів для про�
 
 msgctxt "#32041"
 msgid "Use CloudHole"
-msgstr "Використовувати CloudHole"
+msgstr "Використовувати Elementum прокси"
 
 msgctxt "#32050"
 msgid "Exceptions"

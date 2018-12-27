@@ -111,7 +111,7 @@ msgid "Maximum results per provider"
 msgstr ""
 
 msgctxt "#32041"
-msgid "Use CloudHole"
+msgid "Use Elementum Proxy"
 msgstr ""
 
 msgctxt "#32050"

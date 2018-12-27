@@ -79,8 +79,10 @@ def search(payload, method="general"):
         log.info("Search anime ?")
         method = "anime"
 
-    if "proxy_url" not in payload:
-        payload["proxy_url"] = ""
+    if 'proxy_url' not in payload:
+        payload['proxy_url'] = ''
+    if 'internal_proxy_url' not in payload:
+        payload['internal_proxy_url'] = ''
 
     global request_time
     global provider_names
@@ -283,7 +285,7 @@ def extract_torrents(provider, client):
             log.debug("[%s] Parser debug | Matched '%s' iteration for query '%s': %s" % (provider, 'info_hash', info_hash_search, info_hash))
 
         # Pass client cookies with torrent if private
-        if (definition['private'] or get_setting("use_cloudhole", bool)) and not torrent.startswith('magnet'):
+        if definition['private'] and not torrent.startswith('magnet'):
             user_agent = USER_AGENT
 
             log.debug("[%s] Cookies: %s" % (provider, repr(client.cookies())))
@@ -445,28 +447,14 @@ def extract_from_page(provider, content):
     matches = re.findall('http(.*?).torrent["\']', content)
     if matches:
         result = 'http' + matches[0] + '.torrent'
-        result = result.replace('torcache.net', 'itorrents.org')
         log.debug('[%s] Matched torrent link: %s' % (provider, repr(result)))
         return result
 
-    matches = re.findall('/download\?token=[A-Za-z0-9%]+', content)
+    matches = re.findall('"(/download/[A-Za-z0-9]+)"', content)
     if matches:
         result = definition['root_url'] + matches[0]
-        log.debug('[%s] Matched download link with token: %s' % (provider, repr(result)))
+        log.debug('[%s] Matched download link: %s' % (provider, repr(result)))
         return result
-
-    matches = re.findall('/telechargement/[a-z0-9-_.]+', content)  # cpasbien
-    if matches:
-        result = definition['root_url'] + matches[0]
-        log.debug('[%s] Matched some french link: %s' % (provider, repr(result)))
-        return result
-
-    matches = re.findall('/torrents/download/\?id=[a-z0-9-_.]+', content)  # t411
-    if matches:
-        result = definition['root_url'] + matches[0]
-        log.debug('[%s] Matched download link with an ID: %s' % (provider, repr(result)))
-        return result
-
     return None
 
 

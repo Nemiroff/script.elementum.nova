@@ -85,7 +85,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
     definition = definitions[provider]
     definition = get_alias(definition, get_setting("%s_alias" % provider))
 
-    client = Client()
+    client = Client(info=filtering.info)
     logged_in = False
 
     if get_setting('kodi_language', bool):

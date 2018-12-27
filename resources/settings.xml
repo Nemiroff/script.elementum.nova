@@ -2,13 +2,13 @@
 <settings>
   <category label="32000">
     <setting label="32083" id="use_opennic_dns" type="bool" default="false" />
-    <setting label="32041" id="use_cloudhole" type="bool" default="false" />
+    <setting label="32041" id="use_elementum_proxy" type="bool" default="false" />
     <setting label="32033" id="min_size" type="slider" option="float" range="0,0.25,100" default="0" />
     <setting label="32034" id="max_size" type="slider" option="float" range="1,1,200" default="100" />
     <setting label="32040" id="max_results" type="slider" default="10" option="int" range="1,1,20" />
     <setting label="32091" id="auto_timeout" type="bool" default="true" />
-    <setting label="32070" id="timeout" type="slider" default="13" option="int" range="3,1,180" visible="eq(-1,false)" />
-    <setting label="32071" id="timeout_help" type="text" enable="false" subsetting="true" visible="eq(-2,false)" />
+      <setting label="32070" id="timeout" type="slider" default="13" option="int" range="3,1,180" visible="eq(-1,false)" />
+      <setting label="32071" id="timeout_help" type="text" enable="false" subsetting="true" visible="eq(-2,false)" />
   </category>
   <category label="32001">
     <setting label="32012" type="lsep" />
@@ -25,7 +25,6 @@
       <setting id="tfile_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
     <setting label="32014" type="lsep" />
-    <!-- Providers-Private-Begin -->
     <setting label="[B]0day[/B]" id="use_0day" type="bool" default="false" />
       <setting id="0day_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="0day_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
@@ -119,23 +118,23 @@
   </category>
   <category label="32004">
     <setting label="32035" id="separate_sizes" type="bool" default="false" />
-    <setting label="32006" type="lsep" subsetting="true" visible="eq(-1,true)" />
-    <setting label="32033" id="min_size_movies" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-2,true)" />
-    <setting label="32034" id="max_size_movies" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-3,true)" />
-    <setting label="32008" type="lsep" subsetting="true" visible="eq(-4,true)" />
-    <setting label="32033" id="min_size_seasons" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-5,true)" />
-    <setting label="32034" id="max_size_seasons" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-6,true)" />
-    <setting label="32009" type="lsep" subsetting="true" visible="eq(-7,true)" />
-    <setting label="32033" id="min_size_episodes" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-8,true)" />
-    <setting label="32034" id="max_size_episodes" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-9,true)" />
+      <setting label="32006" type="lsep" subsetting="true" visible="eq(-1,true)" />
+      <setting label="32033" id="min_size_movies" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-2,true)" />
+      <setting label="32034" id="max_size_movies" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-3,true)" />
+      <setting label="32008" type="lsep" subsetting="true" visible="eq(-4,true)" />
+      <setting label="32033" id="min_size_seasons" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-5,true)" />
+      <setting label="32034" id="max_size_seasons" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-6,true)" />
+      <setting label="32009" type="lsep" subsetting="true" visible="eq(-7,true)" />
+      <setting label="32033" id="min_size_episodes" type="slider" option="float" range="0,0.25,100" default="0" subsetting="true" visible="eq(-8,true)" />
+      <setting label="32034" id="max_size_episodes" type="slider" option="float" range="1,1,200" default="100" subsetting="true" visible="eq(-9,true)" />
     <setting label="32036" id="additional_filters" type="bool" default="false" />
-    <setting label="32037" id="filtering_help" type="text" enable="false" subsetting="true" visible="eq(-1,true)" />
-    <setting label="32038" id="accept" type="text" default="" subsetting="true" visible="eq(-2,true)" />
-    <setting label="32039" id="block" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-    <setting label="32017" id="require" type="text" default="" subsetting="true" visible="eq(-4,true)" />
+      <setting label="32037" id="filtering_help" type="text" enable="false" subsetting="true" visible="eq(-1,true)" />
+      <setting label="32038" id="accept" type="text" default="" subsetting="true" visible="eq(-2,true)" />
+      <setting label="32039" id="block" type="text" default="" subsetting="true" visible="eq(-3,true)" />
+      <setting label="32017" id="require" type="text" default="" subsetting="true" visible="eq(-4,true)" />
     <setting label="32018" id="kodi_language" type="bool" default="false" />
-    <setting label="32050" id="language_exceptions" type="text" subsetting="true" visible="eq(-1,true)" />
-    <setting label="32051" id="language_help" type="text" enable="false" subsetting="true" visible="eq(-2,true)" />
+      <setting label="32050" id="language_exceptions" type="text" subsetting="true" visible="eq(-1,true)" />
+      <setting label="32051" id="language_help" type="text" enable="false" subsetting="true" visible="eq(-2,true)" />
     <setting label="32084" id="allow_noseeds" type="bool" default="false" />
   </category>
   <category label="32085">

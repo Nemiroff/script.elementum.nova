@@ -9,6 +9,7 @@ import re
 import ssl
 import sys
 import urllib2
+import xbmcaddon
 from time import sleep
 from urlparse import urlparse
 from contextlib import closing
@@ -52,14 +53,23 @@ class Client:
     """
     Web client class with automatic charset detection and decoding
     """
-    def __init__(self):
+    def __init__(self, info=None):
         self._counter = 0
         self._cookies_filename = ''
         self._cookies = LWPCookieJar()
         self.user_agent = USER_AGENT
+        self.info = info
+        self.proxy_url = None
         self.content = None
         self.status = None
         self.headers = dict()
+
+        if get_setting("use_elementum_proxy", bool):
+            elementum_addon = xbmcaddon.Addon(id='plugin.video.elementum')
+            if elementum_addon and elementum_addon.getSetting('internal_proxy_enabled') == "true":
+                self.proxy_url = "{}://{}:{}".format("http", "127.0.0.1", "65222")
+                if info and "internal_proxy_url" in info:
+                    self.proxy_url = info["internal_proxy_url"]
 
     def _create_cookies(self, payload):
         return urlencode(payload)
@@ -120,7 +130,19 @@ class Client:
         self._read_cookies(url)
         log.debug("Cookies for %s: %s" % (repr(url), repr(self._cookies)))
 
-        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(self._cookies))
+        handlers = []
+
+        if get_setting("use_elementum_proxy", bool):
+            proxyHandler = urllib2.ProxyHandler({
+                'http': self.proxy_url,
+                'https': self.proxy_url,
+            })
+            handlers.append(proxyHandler)
+
+        cookieHandler = urllib2.HTTPCookieProcessor(self._cookies)
+        handlers.append(cookieHandler)
+
+        opener = urllib2.build_opener(*handlers)
         req.add_header('User-Agent', self.user_agent)
         req.add_header('Content-Language', language)
         req.add_header("Accept-Encoding", "gzip")
