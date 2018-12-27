@@ -125,6 +125,9 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
             url_search = url_search.replace('EXTRA', '')
         url_search = url_search.replace(' ', definition['separator'])
 
+        if 'post_data' in definition and not filtering.post_data:
+            filtering.post_data = eval(definition['post_data'])
+
         # Creating the payload for POST method
         payload = dict()
         for key, value in filtering.post_data.iteritems():
