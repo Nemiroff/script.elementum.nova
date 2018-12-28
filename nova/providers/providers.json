@@ -254,7 +254,7 @@
     "base_url": "https://lutik.tv/tracker.php",
     "charset": "",
     "color": "FF5CB9FF",
-    "filter_title": true
+    "filter_title": true,
     "general_extra": "",
     "general_keywords": "{title:original}",
     "general_query": "",
