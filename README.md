@@ -1,4 +1,5 @@
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a47323eac22e4ae984c5306ad85ea354)](https://app.codacy.com/app/Nemiroff/script.elementum.nova?utm_source=github.com&utm_medium=referral&utm_content=Nemiroff/script.elementum.nova&utm_campaign=Badge_Grade_Dashboard)
 # Elementum Nova [![Build Status](https://travis-ci.org/Nemiroff/script.elementum.nova.svg?branch=master)](https://travis-ci.org/Nemiroff/script.elementum.nova) [![GitHub release](https://img.shields.io/github/release/Nemiroff/script.elementum.nova.svg)](https://github.com/Nemiroff/script.elementum.nova/releases/latest) [![Telegram](https://img.shields.io/badge/telegram-%40Elementum__nova-blue.svg)](https://t.me/elementum_nova)
 ### Возможности
 - Ну вроде быстрый
