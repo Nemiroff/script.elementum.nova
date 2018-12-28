@@ -403,17 +403,17 @@ def extract_from_api(provider, client):
             name = "%s - %s" % (name, result[api_format['quality']])
         if 'size' in api_format:
             size = result[api_format['size']]
-            if type(size) in (long, int):
+            if isinstance(size, long, int):
                 size = sizeof(size)
-            elif type(size) in (str, unicode) and size.isdigit():
+            elif isinstance(size, str, unicode) and size.isdigit():
                 size = sizeof(int(size))
         if 'seeds' in api_format:
             seeds = result[api_format['seeds']]
-            if type(seeds) in (str, unicode) and seeds.isdigit():
+            if isinstance(seeds, str, unicode) and seeds.isdigit():
                 seeds = int(seeds)
         if 'peers' in api_format:
             peers = result[api_format['peers']]
-            if type(peers) in (str, unicode) and peers.isdigit():
+            if isinstance(peers, str, unicode) and peers.isdigit():
                 peers = int(peers)
         yield (name, info_hash, torrent, size, seeds, peers)
 

@@ -125,11 +125,11 @@ def get_enabled_providers(method):
         list: All available enabled provider IDs
     """
     results = []
-    type = "2"
+    mtype = "2"
     if method == "general":
-        type = "0"
+        mtype = "0"
     elif method == "movie":
-        type = "1"
+        mtype = "1"
     for provider in definitions:
         if 'enabled' in definitions[provider] and not definitions[provider]['enabled']:
             continue
@@ -138,7 +138,7 @@ def get_enabled_providers(method):
             contains = get_setting('%s_contains' % provider, choices=('All', 'Movies', 'Shows'))
             if not contains or contains == "0":
                 results.append(provider)
-            elif contains == type or type == "0":
+            elif contains == mtype or mtype == "0":
                 results.append(provider)
         if 'custom' in definitions[provider] and definitions[provider]['custom']:
             results.append(provider)

@@ -457,6 +457,7 @@ class Filtering:
 
         return value
 
+    @classmethod
     def included(self, value, keys, strict=False):
         """ Check if the keys are present in the string
 
@@ -488,6 +489,7 @@ class Filtering:
             res = any(res1)
         return res
 
+    @classmethod
     def unescape(self, name):
         """ Unescapes all HTML entities from a string using
             HTMLParser().unescape()

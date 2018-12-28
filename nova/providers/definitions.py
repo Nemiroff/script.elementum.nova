@@ -125,7 +125,7 @@ if not os.path.exists(custom_providers):
         os.makedirs(custom_providers)
     except Exception as e:
         log.error("Unable to create custom providers folder: %s", repr(e))
-        pass
+
 for provider_file in glob(os.path.join(custom_providers, "*.json")):
     log.info("Importing and enabling %s" % provider_file)
     load_providers(provider_file, custom=True)
