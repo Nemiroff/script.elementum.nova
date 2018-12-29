@@ -154,7 +154,11 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
 
             if 'login_object' in definition and definition['login_object']:
                 logged_in = False
-                login_object = definition['login_object'].replace('USERNAME', '"%s"' % username).replace('PASSWORD', '"%s"' % password)
+                try:
+                    login_object = definition['login_object'].replace('USERNAME', '"%s"' % username).replace('PASSWORD', '"%s"' % password)
+                except Exception, e:
+                    log.error("[{0}] Make login_object fail: {1}".format(provider, e))
+                    return filtering.results
 
                 # TODO generic flags in definitions for those...
                 if provider == 'lostfilm':
