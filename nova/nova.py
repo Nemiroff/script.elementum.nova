@@ -233,7 +233,6 @@ def extract_torrents(provider, client):
 
             # New client instance, otherwise it's race conditions all over the place
             subclient = Client()
-            subclient.passkey = client.passkey
 
             uri = torrent.split('|')  # Split cookies for private trackers
             subclient.open(uri[0].encode('utf-8'))

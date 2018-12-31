@@ -25,8 +25,7 @@ try:
 except:
     log.debug("Skipping SSL workaround due to old Python version")
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 " \
-             "(KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36"
 try:
     PATH_TEMP = translatePath("special://temp").decode(sys.getfilesystemencoding(), 'ignore')
 except:
@@ -35,7 +34,12 @@ except:
 if get_setting("use_opennic_dns", bool):
     import socket
     prv_getaddrinfo = socket.getaddrinfo
-    dns_cache = {('nnm-club.lib', 80, 0, 1): [(2, 1, 0, '', ('81.17.30.22', 80))], ('rustorka.lib', 80, 0, 1): [(2, 1, 0, '', ('93.171.158.6', 80))], ('rutracker.lib', 80, 0, 1): [(2, 1, 0, '', ('195.82.146.214', 80))], ('rutor.lib', 80, 0, 1): [(2, 1, 0, '', ('185.191.239.206', 80))]}
+    dns_cache = {
+        ('nnm-club.lib', 80, 0, 1): [(2, 1, 0, '', ('81.17.30.22', 80))],
+        ('rustorka.lib', 80, 0, 1): [(2, 1, 0, '', ('93.171.158.6', 80))],
+        ('rutracker.lib', 80, 0, 1): [(2, 1, 0, '', ('195.82.146.214', 80))],
+        ('rutor.lib', 80, 0, 1): [(2, 1, 0, '', ('185.176.192.243', 80))]
+    }
 
     def new_getaddrinfo(*args):
         try:
