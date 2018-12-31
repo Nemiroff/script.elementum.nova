@@ -288,8 +288,8 @@
     "subpage": false,
     "tv_extra": "",
     "tv_extra2": "",
-    "tv_keywords": "{title:original} %D0%A1%D0%B5%D0%B7%D0%BE%D0%BD {season}",
-    "tv_keywords2": "{title:original} {season} %D0%A1%D0%B5%D0%B7%D0%BE%D0%BD"
+    "tv_keywords": "{title:original}  {season}",
+    "tv_keywords2": "{title:original} {season}"
   },
   "megapeer": {
     "anime_extra": "",
