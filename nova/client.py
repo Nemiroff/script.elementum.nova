@@ -136,7 +136,7 @@ class Client:
 
         handlers = []
 
-        if get_setting("use_elementum_proxy", bool):
+        if get_setting("use_elementum_proxy", bool) and self.proxy_url:
             proxyHandler = urllib2.ProxyHandler({
                 'http': self.proxy_url,
                 'https': self.proxy_url,
