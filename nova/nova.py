@@ -34,7 +34,7 @@ if auto_timeout:
     elementum_addon = xbmcaddon.Addon(id="plugin.video.elementum")
     if elementum_addon:
         if elementum_addon.getSetting("custom_provider_timeout_enabled") == "true":
-            timeout = int(elementum_addon.getSetting("custom_provider_timeout"))
+            timeout = int(elementum_addon.getSetting("custom_provider_timeout")) - 3
         else:
             timeout = 28
         log.debug("Using timeout from Elementum: %d sec" % (timeout))
