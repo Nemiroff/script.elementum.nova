@@ -672,5 +672,41 @@
     "tv_extra2": "",
     "tv_keywords": "{title:original} {season:2}x01",
     "tv_keywords2": "{title:original} S{season:2}"
+  },
+  "yohoho": {
+    "base_url": "https://4h0y.yohoho.cc/?title=QUERYEXTRA",
+    "charset": "utf-8",
+    "color": "deepskyblue",
+    "general_extra": "",
+    "general_keywords": "{title}",
+    "general_query": "",
+    "filter_title": true,
+    "language": "ru",
+    "name": "Yohoho",
+    "parser": {
+        "infohash": "",
+        "row": "find_once('table', ('class', 'table'), order=1).find_all('tr', start=1)",
+        "name": "item(tag='span', select=('class', 'td-btn'), order=1)",
+        "peers": "1",
+        "seeds": "1",
+        "size": "item(tag='div', order=5)",
+        "torrent": "'%s' % item(tag='a', select=('class', 'td-btn'), order=1, attribute='href')"
+    },
+    "movie_extra": "",
+    "movie_keywords": "{title:original} {year}",
+    "movie_query": "",
+    "private": false,
+    "season_extra": "",
+    "season_extra2": "",
+    "season_keywords": "{title:original} Сезон_{season}",
+    "season_keywords2": "{title:original} S{season:2}",
+    "season_query": "",
+    "show_query": "",
+    "separator": "%20",
+    "subpage": false,
+    "tv_extra": "",
+    "tv_extra2": "",
+    "tv_keywords": "{title:original} {season:2}x01",
+    "tv_keywords2": "{title:original} S{season:2}"
   }
 }
