@@ -590,7 +590,7 @@
     "anime_extra": "",
     "anime_keywords": "{title}",
     "anime_query": "",
-    "base_url": "http://toloka.to/tracker.php?nm=QUERYEXTRA&prev_new=0&prev_oop=1&f[]=-1&o=10&s=2&oop=1&pn=",
+    "base_url": "https://toloka.to/tracker.php?nm=QUERYEXTRA&prev_new=0&prev_oop=1&f[]=-1&o=10&s=2&oop=1&pn=",
     "charset": "",
     "color": "FFFFFFFF",
     "general_extra": "",
@@ -598,7 +598,7 @@
     "general_query": "",
     "language": "ua",
     "login_failed": "Такий псевдонім не існує, або не збігається пароль.",
-    "login_object": "{'username': USERNAME, 'password': PASSWORD, 'autologin': 'on', 'redirect': 'index.php%3F', 'login': '%D0%92%D1%85%D1%96%D0%B4'}",
+    "login_object": "{'username': USERNAME, 'password': PASSWORD, 'autologin': 'on', 'login': '%D0%92%D1%85%D1%96%D0%B4'}",
     "login_path": "/login.php",
     "movie_extra": "",
     "movie_keywords": "{title:original} {year}",
@@ -611,13 +611,13 @@
       "row": "find_once('table', ('class', 'forumline'), order=2).find_all('tr', start=2)",
       "seeds": "item(tag='td', select=('class', 'seedmed'), order=1)",
       "size": "item(tag='td', select=('class', 'small'), order=1, divider=(' ', 2))",
-      "torrent": "'http://toloka.to/%s' % item(tag='a', select=('class', 'genmed'), attribute='href', order=3)"
+      "torrent": "'https://toloka.to/%s' % item(tag='a', select=('class', 'genmed'), attribute='href', order=3)"
     },
     "private": true,
-    "root_url": "http://toloka.to",
+    "root_url": "https://toloka.to",
     "season_extra": "",
     "season_extra2": "",
-    "season_keywords": "{title:original} Сезон {season}",
+    "season_keywords": "{title:original} Сезон_{season}",
     "season_keywords2": "{title:original} S{season:2}",
     "season_query": "",
     "separator": "+",
@@ -626,7 +626,7 @@
     "tv_extra": "",
     "tv_extra2": "",
     "tv_keywords": "{title:original} s{season:2}e{episode:2}",
-    "tv_keywords2": "{title:original} Сезон {season}"
+    "tv_keywords2": "{title:original} Сезон_{season}"
   },
   "torrent.by": {
     "anime_extra": "",
