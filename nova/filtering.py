@@ -15,7 +15,7 @@ from utils import Magnet, get_int, get_float, clean_number, size_int, get_alias
 
 try:
     from collections import OrderedDict
-except:
+except ImportError:
     from ordereddict import OrderedDict
 
 
