@@ -36,9 +36,8 @@ if get_setting("use_opennic_dns", bool):
     prv_getaddrinfo = socket.getaddrinfo
     dns_cache = {
         ('nnm-club.lib', 80, 0, 1): [(2, 1, 0, '', ('81.17.30.22', 80))],
-        ('rustorka.lib', 80, 0, 1): [(2, 1, 0, '', ('93.171.158.6', 80))],
         ('rutracker.lib', 80, 0, 1): [(2, 1, 0, '', ('195.82.146.214', 80))],
-        ('rutor.lib', 80, 0, 1): [(2, 1, 0, '', ('185.176.192.243', 80))]
+        ('rutor.lib', 80, 0, 1): [(2, 1, 0, '', ('46.148.16.231', 80))]
     }
 
     def new_getaddrinfo(*args):
