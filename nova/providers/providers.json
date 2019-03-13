@@ -609,7 +609,7 @@
       "peers": "item(tag='td', select=('class', 'leechmed'), order=1)",
       "row": "find_once('table', ('class', 'forumline'), order=2).find_all('tr', start=2)",
       "seeds": "item(tag='td', select=('class', 'seedmed'), order=1)",
-      "size": "item(tag='td', select=('class', 'small'), order=1, divider=(' ', 2))",
+      "size": "item(tag='td', select=('class', 'gensmall'), order=1)",
       "torrent": "'https://toloka.to/%s' % item(tag='a', select=('class', 'genmed'), attribute='href', order=3)"
     },
     "private": true,
