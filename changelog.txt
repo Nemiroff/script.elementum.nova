@@ -1,5 +1,10 @@
 Nova changelog
 ===============
+[B]v1.0.27[/B] 14.03.2019
+ - Добавлен TorLook (rutor, nnm, rutracker, underverse)
+ - Поправлено отображение размера раздач у Toloka
+ - Добавлены ретрекеры к создаваемому магнету у Kinozal
+
 [B]v1.0.26[/B] 21.02.2019
  - Очередные правки доменов: rutor, megapeer, rustorka, tfile
 
