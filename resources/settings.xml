@@ -25,8 +25,8 @@
       <setting id="tfile_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
     <setting label="TorLook" id="use_torlook" type="bool" default="false" />
-      <setting id="torlook_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1, true)" />
-      <setting id="torlook_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2, true)" />
+      <setting id="torlook_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="torlook_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
     <setting label="Torrent.by" id="use_torrent.by" type="bool" default="false" />
       <setting id="torrent.by_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
