@@ -709,7 +709,7 @@
     "tv_keywords2": "{title:original} S{season:2}"
   },
   "yohoho": {
-    "base_url": "https://4h0y.yohoho.cc/?title=QUERYEXTRA",
+    "base_url": "https://ahoy.yohoho.cc/4h0y?title=QUERYEXTRA",
     "charset": "utf-8",
     "color": "deepskyblue",
     "general_extra": "",
@@ -730,6 +730,7 @@
     "movie_extra": "",
     "movie_keywords": "{title:original} {year}",
     "movie_query": "",
+    "post_data": "{'search': 'QUERY'}",
     "private": false,
     "season_extra": "",
     "season_extra2": "",
