@@ -187,7 +187,6 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         if series_details:
                             client.open(definition['root_url'] + '/v_search.php?c=%s&s=%s&e=%s' % (series_details.group(1), series_details.group(2), series_details.group(3)))
                             redirect_url = re.search(ur'url=(.*?)">', client.content)
-                            log.debug("URL = %s" %(client.content))
                             if redirect_url is not None:
                                 url_search = redirect_url.group(1)
                         else:

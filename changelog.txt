@@ -1,5 +1,8 @@
 Nova changelog
 ===============
+[B]v1.0.29[/B] 26.06.2019
+ - Поправлены LostFilm.TV, MegaPeer, Rustorka, TFile, Yohoho
+ 
 [B]v1.0.27[/B] 14.03.2019
  - Добавлен TorLook (rutor, nnm, rutracker, underverse)
  - Поправлено отображение размера раздач у Toloka
