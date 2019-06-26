@@ -163,7 +163,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                 # TODO generic flags in definitions for those...
                 if provider == 'lostfilm':
                     client.open(definition['root_url'] + '/v_search.php?c=110&s=1&e=1')
-                    if client.content == 'log in first':
+                    if u'Вход. – LostFilm.TV.' in client.content:
                         pass
                     else:
                         log.info('[%s] Login successful' % provider)
@@ -183,11 +183,11 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         log.info('[%s] Search lostfilm serial ID...', provider)
                         url_search = fix_lf(url_search)
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
-                        search_info = re.search(r'rel="(.*?)">', client.content)
-                        if search_info:
-                            series_details = re.search('(\d+),(\d+),(\d+)', search_info.group(1))
+                        series_details = re.search(r'"mark-rate-pane" rel="(\d+),(\d+),(\d+)">', client.content)
+                        if series_details:
                             client.open(definition['root_url'] + '/v_search.php?c=%s&s=%s&e=%s' % (series_details.group(1), series_details.group(2), series_details.group(3)))
                             redirect_url = re.search(ur'url=(.*?)">', client.content)
+                            log.debug("URL = %s" %(client.content))
                             if redirect_url is not None:
                                 url_search = redirect_url.group(1)
                         else:
