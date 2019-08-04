@@ -438,7 +438,13 @@ def extract_from_page(provider, content):
     definition = get_alias(definition, get_setting("%s_alias" % provider))
 
     if provider == "kinozal":
-        matches = re.findall(r'\: (.{40})', content)  # kinozal
+        matches = re.findall(r'magnet:\?[^\'"\s<>\[\]]+', content)
+        if matches:
+            result = matches[0]
+            log.debug('[%s] Matched magnet link: %s' % (provider, repr(result)))
+            return result
+
+        matches = re.findall(r'\: ([A-Fa-f0-9]{40})', content)  # kinozal
         if matches:
             result = "magnet:?xt=urn:btih:" + matches[0] + "&tr=http%3A%2F%2Ftr0.torrent4me.com%2Fann%3Fuk%3Dstl41hKc1E&tr=http%3A%2F%2Ftr0.torrent4me.com%2Fann%3Fuk%3Dstl41hKc1E&tr=http%3A%2F%2Ftr0.tor4me.info%2Fann%3Fuk%3Dstl41hKc1E&tr=http%3A%2F%2Ftr0.tor2me.info%2Fann%3Fuk%3Dstl41hKc1E&tr=http%3A%2F%2Fretracker.local%2Fannounce"
             log.debug('[%s] Make magnet from info_hash: %s' % (provider, repr(result)))
