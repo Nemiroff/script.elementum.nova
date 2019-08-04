@@ -79,6 +79,8 @@ def search(payload, method="general"):
         log.info("Search anime ?")
         method = "anime"
 
+    if 'silent' not in payload:
+        payload['silent'] = False
     if 'proxy_url' not in payload:
         payload['proxy_url'] = ''
     if 'internal_proxy_url' not in payload:
@@ -97,7 +99,8 @@ def search(payload, method="general"):
     providers = get_enabled_providers(method)
 
     if len(providers) == 0:
-        notify(translation(32060), image=get_icon_path())
+        if not payload['silent']:
+            notify(translation(32060), image=get_icon_path())
         log.error("No providers enabled")
         return []
 
@@ -113,7 +116,8 @@ def search(payload, method="general"):
             log.info("No '%s' translation available..." % kodi_language)
 
     p_dialog = xbmcgui.DialogProgressBG()
-    p_dialog.create('Elementum [COLOR FF5CB9FF]Nova[/COLOR]', translation(32061))
+    if not payload['silent']:
+        p_dialog.create('Elementum [COLOR FF5CB9FF]Nova[/COLOR]', translation(32061))
     for provider in providers:
         available_providers += 1
         provider_names.append(definitions[provider]['name'])
@@ -130,17 +134,20 @@ def search(payload, method="general"):
         if timer > timeout:
             break
         message = translation(32062) % available_providers if available_providers > 1 else translation(32063)
-        p_dialog.update(int((total - available_providers) / total * 100), message=message)
+        if not payload['silent']:
+            p_dialog.update(int((total - available_providers) / total * 100), message=message)
         time.sleep(0.25)
 
-    p_dialog.close()
+    if not payload['silent']:
+        p_dialog.close()
     del p_dialog
 
     if available_providers > 0:
         message = u', '.join(provider_names)
         message = message + translation(32064)
         log.warning(message.encode('utf-8'))
-        notify(message, ADDON_ICON)
+        if not payload['silent']:
+            notify(message, ADDON_ICON)
 
     log.debug("all provider_results: %s" % repr(provider_results))
 
