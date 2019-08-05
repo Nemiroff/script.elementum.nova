@@ -127,7 +127,7 @@
     "anime_extra": "",
     "anime_keywords": "",
     "anime_query": "",
-    "base_url": "https://casstudio.tv/search.php?tracker_search=tracker&keywords=QUERYEXTRA&terms=all&author=&sc=1&sf=titleonly&sr=topics&sk=t&sd=d&st=0&ch=0&t=0&submit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA",
+    "base_url": "https://casstudio.tk/search.php?tracker_search=tracker&keywords=QUERYEXTRA&terms=all&author=&sc=1&sf=titleonly&sr=topics&sk=t&sd=d&st=0&ch=0&t=0&submit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA",
     "color": "FFFFFFFF",
     "general_extra": "",
     "general_keywords": "{title:original}",
@@ -147,10 +147,10 @@
       "row": "find_once('table', ('class', 'cat'), order=1).find_all('tr')",
       "seeds": "item(tag='span', select=('class', 'seed'))",
       "size": "item(tag='b', order=2)",
-      "torrent": "'https://casstudio.tv%s' % item(tag='a', attribute='href', order=1)[1:]"
+      "torrent": "'https://casstudio.tk%s' % item(tag='a', attribute='href', order=1)[1:]"
     },
     "private": true,
-    "root_url": "https://casstudio.tv",
+    "root_url": "https://casstudio.tk",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original} Сезон: {season}",
