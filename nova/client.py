@@ -77,7 +77,7 @@ class Client:
                 if info and "internal_proxy_url" in info:
                     log.debug("Use Internal Elementum Proxy")
                     self.proxy_url = info["internal_proxy_url"]
-            if elementum_addon.getSetting("proxy_enabled") == "true":
+            if elementum_addon.getSetting("proxy_enabled") == "true" and get_setting("use_proxy_setting", bool):
                 self.proxy_type = int(elementum_addon.getSetting("proxy_type"))
                 log.debug("Use users proxy from elementum settings: {0}".format(proxy_types[self.proxy_type]))
                 prx_host = elementum_addon.getSetting("proxy_host")

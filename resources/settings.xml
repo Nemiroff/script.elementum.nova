@@ -158,5 +158,6 @@
     <setting label="32087" id="disable_max" type="bool" default="false" />
     <setting label="32088" id="sort_by_resolution" type="bool" default="false" />
     <setting label="32090" id="use_debug_parser" type="bool" default="false" />
+    <setting label="Use proxy settings from Elementum" id="use_proxy_setting" type="bool" default="false" />
   </category>
 </settings>
