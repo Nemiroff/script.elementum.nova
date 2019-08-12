@@ -51,6 +51,8 @@ if get_setting("use_opennic_dns", bool):
 
     socket.getaddrinfo = new_getaddrinfo
 
+# Proxy types
+proxy_types = ["socks4", "socks5", "http", "i2p"]
 
 class Client:
     """
@@ -62,6 +64,7 @@ class Client:
         self._cookies = LWPCookieJar()
         self.user_agent = USER_AGENT
         self.info = info
+        self.proxy_type = None
         self.proxy_url = None
         self.content = None
         self.status = None
@@ -72,7 +75,14 @@ class Client:
             if elementum_addon and elementum_addon.getSetting('internal_proxy_enabled') == "true":
                 self.proxy_url = "{0}://{1}:{2}".format("http", "127.0.0.1", "65222")
                 if info and "internal_proxy_url" in info:
+                    log.debug("Use Internal Elementum Proxy")
                     self.proxy_url = info["internal_proxy_url"]
+            if elementum_addon.getSetting("proxy_enabled") == "true":
+                self.proxy_type = int(elementum_addon.getSetting("proxy_type"))
+                log.debug("Use users proxy from elementum settings: {0}".format(proxy_types[self.proxy_type]))
+                prx_host = elementum_addon.getSetting("proxy_host")
+                prx_port = elementum_addon.getSetting("proxy_port")
+                self.proxy_url = "{0}://{1}:{2}".format(proxy_types[self.proxy_type], prx_host, prx_port)
 
     @classmethod
     def _create_cookies(self, payload):
@@ -137,11 +147,24 @@ class Client:
         handlers = []
 
         if get_setting("use_elementum_proxy", bool) and self.proxy_url:
-            proxyHandler = urllib2.ProxyHandler({
-                'http': self.proxy_url,
-                'https': self.proxy_url,
-            })
-            handlers.append(proxyHandler)
+            if self.proxy_type:
+                if self.proxy_type == 2:
+                    proxyHandler = urllib2.ProxyHandler({
+                        'http': self.proxy_url,
+                        'https': self.proxy_url,
+                    })
+                    handlers.append(proxyHandler)
+                elif self.proxy_type == 1:
+                    import proxy.socks as socks
+                    from proxy.sockshandler import SocksiPyHandler
+                    prx_info = self.proxy_url.split(':')
+                    handlers.append(SocksiPyHandler(socks.PROXY_TYPE_SOCKS5, prx_info[1].replace("//", ''), int(prx_info[2])))
+            else:
+                proxyHandler = urllib2.ProxyHandler({
+                    'http': self.proxy_url,
+                    'https': self.proxy_url,
+                })
+                handlers.append(proxyHandler)
 
         cookieHandler = urllib2.HTTPCookieProcessor(self._cookies)
         handlers.append(cookieHandler)
