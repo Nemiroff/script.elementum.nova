@@ -1,3 +1,4 @@
+os: linux
 language: python
 python:
 - '2.7'
@@ -14,7 +15,7 @@ before_deploy:
 
 deploy:
   provider: releases
-  api_key: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
   file: script.elementum.nova-${TRAVIS_TAG:1}.zip
   skip_cleanup: true
   overwrite: true

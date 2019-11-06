@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.elementum.nova" name="[COLOR FF5CB9FF]Nova[/COLOR] for Elementum" version="1.0.31" provider-name="Nemiroff">
+<addon id="script.elementum.nova" name="[COLOR FF5CB9FF]Nova[/COLOR] for Elementum" version="1.0.32" provider-name="Nemiroff">
     <requires>
         <import addon="xbmc.python" version="2.19.0"/>
         <import addon="plugin.video.elementum" optional="true"/>
