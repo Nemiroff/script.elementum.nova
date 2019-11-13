@@ -272,7 +272,7 @@
       "row": "find_once('table', ('id', 'tor-tbl'), order=1).find_all('tr')",
       "seeds": "item(tag='span', select=('class', 'seedmed'), order=1)",
       "size": "item(tag='a', select=('class', 'tr-dl'), order=1)",
-      "torrent": "'http://mptop.ru/%s' % item(tag='a', select=('class', 'tr-dl'), attribute='href', order=1)"
+      "torrent": "'http://mptop.ru/%s' % item(tag='a', select=('class', 'external'), attribute='href', order=1)"
     },
     "private": true,
     "root_url": "http://mptop.ru",
@@ -398,7 +398,7 @@
       "row": "find_once('table', ('class', 'forumline'), order=1).find_all('tr', start=2)",
       "seeds": "item(tag='td', select=('class', 'seedmed'), order=1)",
       "size": "item(tag='td', select=('class', 'small'), order=1, divider=(' ', 2))",
-      "torrent": "'http://rustorka.net/forum/%s' % item(tag='a', select=('class', 'dLink'), attribute='href', order=1)"
+      "torrent": "'http://rustorka.net/forum/%s' % item(tag='a', select=('class', 'genmed'), attribute='href', order=1)[2:]"
     },
     "private": true,
     "root_url": "http://rustorka.com",
@@ -409,7 +409,7 @@
     "season_query": "&f%5B%5D=-1&f%5B%5D=1959&f%5B%5D=1867&f%5B%5D=1866&f%5B%5D=1865&f%5B%5D=1864&f%5B%5D=1863&f%5B%5D=1861&f%5B%5D=1860&f%5B%5D=1859&f%5B%5D=1858&f%5B%5D=1857&f%5B%5D=1856&f%5B%5D=1854&f%5B%5D=1853&f%5B%5D=1852&f%5B%5D=1851&f%5B%5D=1850&f%5B%5D=1849&f%5B%5D=1847&f%5B%5D=1846&f%5B%5D=1845&f%5B%5D=1844&f%5B%5D=1843&f%5B%5D=1842&f%5B%5D=1877&f%5B%5D=1876&f%5B%5D=1875&f%5B%5D=1874&f%5B%5D=1873&f%5B%5D=1872",
     "separator": "+",
     "show_query": "&f%5B%5D=-1&f%5B%5D=1959&f%5B%5D=1867&f%5B%5D=1866&f%5B%5D=1865&f%5B%5D=1864&f%5B%5D=1863&f%5B%5D=1861&f%5B%5D=1860&f%5B%5D=1859&f%5B%5D=1858&f%5B%5D=1857&f%5B%5D=1856&f%5B%5D=1854&f%5B%5D=1853&f%5B%5D=1852&f%5B%5D=1851&f%5B%5D=1850&f%5B%5D=1849&f%5B%5D=1847&f%5B%5D=1846&f%5B%5D=1845&f%5B%5D=1844&f%5B%5D=1843&f%5B%5D=1842&f%5B%5D=1877&f%5B%5D=1876&f%5B%5D=1875&f%5B%5D=1874&f%5B%5D=1873&f%5B%5D=1872",
-    "subpage": false,
+    "subpage": true,
     "tv_extra": "",
     "tv_extra2": "",
     "tv_keywords": "{title:original} \"{season} Сезон\"",
@@ -441,7 +441,7 @@
       "row": "find_once('table', order=3).find_all('tr', start=2)",
       "seeds": "item(tag='span', order=1, select=('class', 'green'))",
       "size": "item.find_all('td', ('align', 'right'))[-1].text()",
-      "torrent": "'http://rutor.info%s' % item(tag='a', order=1, select=('class', 'downgif'), attribute='href') if item(tag='a', order=1, select=('class', 'downgif'), attribute='href').startswith('/') else item(tag='a', order=1, select=('class', 'downgif'), attribute='href')"
+      "torrent": "item(tag='a', order=1, attribute='href')"
     },
     "private": false,
     "season_extra": "",
@@ -646,7 +646,7 @@
       "row": "find_once('table', ('id', 'torrents_table'), order=1).find_all('tr', start=2)",
       "seeds": "item(tag='td', order=6, divider=(' ', 2))",
       "size": "item(tag='td', order=5)",
-      "torrent": "'http://torrent.by%s' % item(tag='a', select=('class', 'dwnld'), attribute='href', order=1)"
+      "torrent": "'http://torrent.by%s' % item(tag='a', select=('class', 'magnet'), attribute='href', order=1)"
     },
     "post_data": "{'search': 'QUERY', 'cat': '0', 'search_in': '0'}",
     "private": false,

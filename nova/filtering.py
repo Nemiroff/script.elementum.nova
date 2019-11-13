@@ -543,14 +543,16 @@ def cleanup_results(results_list):
         if not result['seeds'] and not allow_noseeds:
             continue
 
+        provider_name = result['provider'][result['provider'].find(']')+1:result['provider'].find('[/')]
+
         if not result['uri']:
             if not result['name']:
                 continue
             try:
-                log.warning('[%s] No URI for %s' % (result['provider'][16:-8], repr(result['name'])))
+                log.warning('[%s] No URI for %s' % (provider_name, repr(result['name'])))
             except Exception as e:
                 import traceback
-                log.warning("%s logging failed with: %s" % (result['provider'], repr(e)))
+                log.warning("%s logging failed with: %s" % (provider_name, repr(e)))
                 map(log.debug, traceback.format_exc().split("\n"))
             continue
 
@@ -563,7 +565,7 @@ def cleanup_results(results_list):
                 hash_ = hashlib.md5(result['uri']).hexdigest()
 
         try:
-            log.debug("[%s] Hash for %s: %s" % (result['provider'][16:-8], repr(result['name']), hash_))
+            log.debug("[%s] Hash for %s: %s" % (provider_name, repr(result['name']), hash_))
         except Exception as e:
             import traceback
             log.warning("%s logging failed with: %s" % (result['provider'], repr(e)))
