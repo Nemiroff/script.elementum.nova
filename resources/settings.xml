@@ -28,10 +28,6 @@
       <setting id="torrent.by_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="torrent.by_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
-    <setting label="Lutik.TV" id="use_lutik" type="bool" default="false" />
-      <setting id="lutik_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="lutik_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
-
     <setting label="Yohoho" id="use_yohoho" type="bool" default="false" />
       <setting id="yohoho_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="yohoho_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
@@ -74,7 +70,7 @@
       <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
     <setting label="[B]Megapeer[/B]" id="use_megapeer" type="bool" default="false" />
-      <setting id="megapeer_username" label="32082" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="megapeer_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="megapeer_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="megapeer_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="megapeer_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
