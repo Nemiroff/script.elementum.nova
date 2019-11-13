@@ -485,7 +485,7 @@
       "row": "find_once('table', order=3).find_all('tr', start=2)",
       "seeds": "item(tag='span', order=1, select=('class', 'green'))",
       "size": "item.find_all('td', ('align', 'right'))[-1].text()",
-      "torrent": "item(tag='a', order=1, select=('class', 'downgif'), attribute='href')"
+      "torrent": "'http://rutor.info%s' % item(tag='a', order=1, select=('class', 'downgif'), attribute='href') if item(tag='a', order=1, select=('class', 'downgif'), attribute='href').startswith('/') else item(tag='a', order=1, select=('class', 'downgif'), attribute='href')"
     },
     "private": false,
     "season_extra": "",
