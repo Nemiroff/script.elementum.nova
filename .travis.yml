@@ -15,7 +15,7 @@ before_deploy:
 
 deploy:
   provider: releases
-  token: $GITHUB_TOKEN
+  api_key: $GITHUB_TOKEN
   file: script.elementum.nova-${TRAVIS_TAG:1}.zip
   skip_cleanup: true
   overwrite: true

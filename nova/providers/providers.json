@@ -251,7 +251,7 @@
     "anime_extra": "",
     "anime_keywords": "{title:ru}",
     "anime_query": "",
-    "base_url": "http://mptop.ru/browse.php?search=QUERYEXTRA&stype=1",
+    "base_url": "http://mptop.ru/browse.php?search=QUERY&age=EXTRA&cat=0&stype=0&sort=2&ascdesc=0",
     "charset": "windows-1251",
     "color": "FFFFFFFF",
     "general_extra": "",
@@ -261,8 +261,8 @@
     "login_failed": "Ошибка",
     "login_object": "{'username': USERNAME, 'password': PASSWORD}",
     "login_path": "/takelogin.php",
-    "movie_extra": "",
-    "movie_keywords": "{title:original} {year}",
+    "movie_extra": "{year}",
+    "movie_keywords": "{title:original}",
     "movie_query": "",
     "name": "MegaPeer",
     "parser": {
@@ -272,7 +272,7 @@
       "row": "find_once('table', ('id', 'tor-tbl'), order=1).find_all('tr')",
       "seeds": "item(tag='span', select=('class', 'seedmed'), order=1)",
       "size": "item(tag='a', select=('class', 'tr-dl'), order=1)",
-      "torrent": "'http://mptop.ru/%s' % item(tag='a', select=('class', 'external'), attribute='href', order=1)"
+      "torrent": "'http://mptop.ru/%s' % item(tag='a', attribute='href', order=3)"
     },
     "private": true,
     "root_url": "http://mptop.ru",
@@ -441,7 +441,7 @@
       "row": "find_once('table', order=3).find_all('tr', start=2)",
       "seeds": "item(tag='span', order=1, select=('class', 'green'))",
       "size": "item.find_all('td', ('align', 'right'))[-1].text()",
-      "torrent": "item(tag='a', order=1, attribute='href')"
+      "torrent": "item(tag='a', order=2, attribute='href')"
     },
     "private": false,
     "season_extra": "",
