@@ -25,7 +25,7 @@ try:
 except:
     log.debug("Skipping SSL workaround due to old Python version")
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36"
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
 try:
     PATH_TEMP = translatePath("special://temp").decode(sys.getfilesystemencoding(), 'ignore')
 except:
