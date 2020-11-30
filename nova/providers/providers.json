@@ -210,7 +210,7 @@
     "anime_extra": "",
     "anime_keywords": "",
     "anime_query": "",
-    "base_url": "http://www.lostfilm.tv/series/QUERY/",
+    "base_url": "https://www.lostfilm.run/series/QUERY/",
     "color": "FF5CB9FF",
     "general_extra": "",
     "general_keywords": "{title:original}/seasons",
@@ -233,7 +233,7 @@
       "torrent": "'%s' % (item(tag='a', attribute='href', order=2))"
     },
     "private": true,
-    "root_url": "http://www.lostfilm.tv",
+    "root_url": "https://www.lostfilm.run",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original}/season_{season}",

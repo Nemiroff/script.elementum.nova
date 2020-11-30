@@ -185,7 +185,7 @@ def process(provider, generator, filtering, has_special, verify_name=True, verif
                         client.open(url_search.encode('utf-8'), post_data=payload, get_data=data)
                         series_details = re.search(r'"mark-rate-pane" rel="(\d+),(\d+),(\d+)">', client.content)
                         if series_details:
-                            client.open(definition['root_url'] + '/v_search.php?c=%s&s=%s&e=%s' % (series_details.group(1), series_details.group(2), series_details.group(3)))
+                            client.open(definition['root_url'] + '/v_search.php?a=%s%s%s' % (series_details.group(1), series_details.group(2).zfill(3), series_details.group(3).zfill(3)))
                             redirect_url = re.search(ur'url=(.*?)">', client.content)
                             if redirect_url is not None:
                                 url_search = redirect_url.group(1)
