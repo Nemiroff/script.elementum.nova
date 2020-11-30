@@ -12,13 +12,14 @@
   </category>
   <category label="32001">
     <setting label="32012" type="lsep" />
+    <setting label="Megapeer" id="use_megapeer" type="bool" default="false" />
+      <setting id="megapeer_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
+      <setting id="megapeer_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
+
+
     <setting label="Rutor" id="use_rutor" type="bool" default="false" />
       <setting id="rutor_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
       <setting id="rutor_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
-
-    <setting label="TFile" id="use_tfile" type="bool" default="false" />
-      <setting id="tfile_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="tfile_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-2,true)" />
 
     <setting label="TorLook" id="use_torlook" type="bool" default="false" />
       <setting id="torlook_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-1,true)" />
@@ -68,12 +69,6 @@
       <setting id="lostfilm_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
       <setting id="lostfilm_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
       <setting id="lostfilm_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
-
-    <setting label="[B]Megapeer[/B]" id="use_megapeer" type="bool" default="false" />
-      <setting id="megapeer_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
-      <setting id="megapeer_password" label="32016" type="text" default="" option="hidden" subsetting="true" visible="eq(-2,true)" />
-      <setting id="megapeer_alias" label="32077" type="text" default="" subsetting="true" visible="eq(-3,true)" />
-      <setting id="megapeer_contains" type="enum" label="32078" subsetting="true" lvalues="32079|32080|32081" visible="eq(-4,true)" />
 
     <setting label="[B]NewStudio[/B]" id="use_newstudio" type="bool" default="false" />
       <setting id="newstudio_username" label="32015" type="text" default="" subsetting="true" visible="eq(-1,true)" />
