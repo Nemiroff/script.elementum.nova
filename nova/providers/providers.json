@@ -543,7 +543,7 @@
     "tv_keywords2": "{title:original} Сезон_{season}"
   },
   "torlook": {
-    "base_url": "https://torlook.info/QUERY/size",
+    "base_url": "https://torlook.info/QUERY/size?forced=1",
     "charset": "utf-8",
     "color": "blue",
     "filter_title": false,
@@ -565,6 +565,7 @@
       "torrent": "'https://torlook.info/%s' % item(tag='a', select=('class', 'magneto'), order=1, attribute='data-src')"
     },
     "private": false,
+    "root_url": "https://torlook.info",
     "season_extra": "",
     "season_extra2": "",
     "season_keywords": "{title:original} Сезон_{season}",
