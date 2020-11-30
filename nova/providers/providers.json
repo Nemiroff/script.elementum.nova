@@ -646,7 +646,7 @@
       "row": "find_once('table', ('id', 'torrents_table'), order=1).find_all('tr', start=2)",
       "seeds": "item(tag='td', order=6, divider=(' ', 2))",
       "size": "item(tag='td', order=5)",
-      "torrent": "'http://torrent.by%s' % item(tag='a', select=('class', 'magnet'), attribute='href', order=1)"
+      "torrent": "item(tag='a', select=('class', 'magnet'), attribute='href', order=1)"
     },
     "post_data": "{'search': 'QUERY', 'cat': '0', 'search_in': '0'}",
     "private": false,
