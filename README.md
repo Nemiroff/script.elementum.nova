@@ -1,4 +1,4 @@
-
+# Разработка версии для Python 2 остановлена.
 # Elementum Nova [![Build Status](https://travis-ci.org/Nemiroff/script.elementum.nova.svg?branch=master)](https://travis-ci.org/Nemiroff/script.elementum.nova) [![GitHub release](https://img.shields.io/github/release/Nemiroff/script.elementum.nova.svg)](https://github.com/Nemiroff/script.elementum.nova/releases/latest) [![Telegram](https://img.shields.io/badge/Telegram-%40nemiroff__repo-blue.svg)](https://t.me/nemiroff_repo)
 ### Возможности
 - Ну вроде быстрый
